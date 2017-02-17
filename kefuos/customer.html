@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>客户</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<div class="main-nov">
+			<div class="main-header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="main-cent">
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li>
+									<a href="conver.html">
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li class="act">
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>
+								</li>
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li>
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li>
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li>
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--全部标签-->
+					<div class="main-cent-mt cust-cent">
+						<div class="cust-mt flex">
+							<div class="cust-int">
+								<input type="text" name="" value="" placeholder="按昵称、电话、姓名查询客户">
+								<a class="cust-search"><i></i></a>		
+							</div>														
+							<a class="cust-time"></a>
+						</div>
+						<div class="cust-row" id="cust_row">
+							<h4 class="cust-h4">全部标签</h4>
+							<div class="cust-ct cust-visible"><a class="cust-title">客户类型</a></div>							
+							<ul class="cust-row-list">
+								<li class="cust-act">优质客户（120）</li>
+								<li>一般客户（10）</li>
+								<li>初级客户（12）</li>
+								<li>青春痘（5）</li>
+								<li>众生元网络（2）</li>
+								<li>新建标签（1）</li>								
+							</ul>
+							<div class="cust-ct"><a class="cust-title">客户评分</a></div>							
+							<ul class="cust-row-list">
+								<li>初级意向0-30分（120）</li>
+								<li>中级意向30-60分（10）</li>
+								<li>高级意向60-80分（12）</li>
+								<li>待收款80-100分（5）</li>
+								<li>成交收款客户（2）</li>												
+							</ul>
+							<div class="cust-ct"><a class="cust-title">客户评分</a></div>	
+						</div>
+					</div>
+					<!--搜索显示内容-->
+					<div class="main-center">
+						<div class="cust-list">
+							<h4 class="cust-list-h4">搜索：<a class="cust-lable">优质客户<i class="cust-rut"></i></a><a class="cust-lable">一般客户<i class="cust-rut"></i></a><a class="cust-lable">成交客户<i class="cust-rut"></i></a></h4>
+							<div class="cust-item cust-lust" id="cust_lust">
+								<div class="flex-cell cust-item-title">
+									<h4 class="sol-1"><input type="checkbox" name="cust-all-name" id="cust"><label for="cust"></label></h4>
+									<h4 class="sol-2">昵称</h4>
+									<h4 class="sol-3">姓名</h4>
+									<h4 class="sol-4">电话</h4>
+									<h4 class="sol-5">来源微信号</h4>
+									<h4 class="sol-6">标签</h4>
+									<h4 class="sol-7">地址</h4>
+								</div>
+								<ul class="cust-item-mt">
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_1">
+											<label for="cust_1">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_2">
+											<label for="cust_2">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_3">
+											<label for="cust_3">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户 优质客户 优质客户 优质客户 优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_4">
+											<label for="cust_4">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_5">
+											<label for="cust_5">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_6">
+											<label for="cust_6">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_7">
+											<label for="cust_7">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_8">
+											<label for="cust_8">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_9">
+											<label for="cust_9">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_10">
+											<label for="cust_10">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_11">
+											<label for="cust_11">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_12">
+											<label for="cust_12">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_13">
+											<label for="cust_13">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_14">
+											<label for="cust_14">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">13800000000</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="cust-bt">
+											<input type="checkbox" name="cust-name" id="cust_15">
+											<label for="cust_15">
+												<a class="cust-zt flex-cell">
+												    <p class="sol-zt2">最是蝶恋花</p>
+													<p class="sol-zt3">林俊杰</p>
+													<p class="sol-zt4">--</p>
+													<p class="sol-zt5">最是蝶恋花</p>
+													<p class="sol-zt6">优质客户</p>
+													<p class="sol-zt7">广东省深圳市南山区科技园科技园科技园科技园</p>
+												</a>
+											</label>
+										</div>
+									</li>
+								</ul>						
+							</div>
+						</div>
+						<div class="cust-page">
+							<ul class="customer-page-item flex-cell">
+								<li class="page-wt"><span class="page-tm"><em>每页15 ，</em><em>共200条</em></span></li>
+								<li class="page-inx"><a class="page-text">首页</a></li>
+								<li><a class="page-flt"><i></i></a></li>
+								<li class="page-act"><a class="page-text">1</a></li>
+								<li><a class="page-text">2</a></li>
+								<li><a class="page-text">3</a></li>
+								<li><a class="page-text">4</a></li>
+								<li><a class="page-text">5</a></li>
+								<li><a class="page-text">6</a></li>
+								<li><a class="page-text">7</a></li>
+								<li><a class="page-frt"><i></i></a></li>
+								<li class="page-inx"><a class="page-text">尾页</a></li>	
+							</ul>
+						</div>
+					</div>
+					<div class="cust-cent-frt">
+						<a class="cust-abs">
+							<img style="width: 1.2em;cursor: pointer;" src="lib/img/icon-muct.png"/>		
+						</a>
+						<div class="cust-bat animated fadeInRight">							
+							<div class="cust-but">
+								<a>批量邀请</a>
+								<a>导出</a>
+							</div>
+							<div class="cust-tab">
+								<ul class="cust-tab-line">
+									<li class="cust-curr">用户资料</li>
+									<li>聊天记录</li>
+								</ul>
+							</div>	
+							<div class="cust-come">
+								<div class="cust-home" style="display: block;">
+									<div class="cust-st">
+										<div class="cust-bg">
+											<span class="hi-icon cust-lot cust-magin"><img class="cust-lot" src="lib/img/icon-h.jpg"/></span>												
+											<h3 class="cust-pt">最是蝶恋花<span>第5次来访</span></h3>
+										</div>
+										<div class="cell-but cust-box">
+											<a class="but-white" id="nav_wait">转接</a>
+											<a class="but-white" id="ord_int">录入订单</a>
+											<a class="but-green">邀请</a>
+										</div>
+										<div class="cust-mess">
+											<ul class="cell-slit">
+												<li>
+													<h4 class="cell-slit-h4">关注日期</h4>
+													<p class="cell-slit-p">2016/12/04</p>
+												</li>
+												<li>
+													<h4 class="cell-slit-h4">最近访问</h4>
+													<p class="cell-slit-p">2016/12/04</p>
+												</li>
+												<li>
+													<h4 class="cell-slit-h4">成交金额</h4>
+													<p class="cell-slit-p">1999元</p>
+												</li>
+											</ul>
+										</div>										
+									</div>
+									
+									<div class="cell-access">
+										<ul class="cell-access-line cust-lict">
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-name.png">
+													<div class="cell-pn-primary">姓名</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" maxlength="5" type="text" name="" value="" placeholder="小米"></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-tel.png">
+													<div class="cell-pn-primary">电话</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" maxlength="11" type="text" name="" value="" placeholder="13800000000"></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-wx.png">
+													<div class="cell-pn-primary letter">微信账号</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" maxlength="16" type="text" name="" value="" placeholder="最是蝶恋花_2016"></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex last-of-type">
+													<img src="lib/img/icon-cell-addr.png">
+													<div class="cell-pn-primary">地址</div>
+												</div>											
+												<div class="flt cell-pn-rt"><textarea class="cell-pn-textarea cust-text" maxlength="50" id="cell_text" name="" rows="3" cols="2" placeholder="深圳市南山区"></textarea></div>
+											</li>		
+											<li>
+												<div class="cell-pn-hd flt flex last-of-type">
+													<img class="cust-img" src="lib/img/icon-backups.png">
+													<div class="cell-pn-primary">备注</div>
+												</div>											
+												<div class="flt cell-pn-rt"><textarea class="cell-pn-textarea cust-text" maxlength="100" id="cell_text2" name="" rows="3" cols="2" ></textarea></div>
+											</li>
+										</ul>
+									</div>
+									<div class="cell-fott-bg cust-fott">
+										<div class="cell-fott">
+											<div class="cell-fott-hd">拜访记录</div>
+											<div class="cell-fott-ft"><a>录入/查询</a></div>
+										</div>
+										<div class="cell-fott-tm">
+											<ul class="cell-fott-tm-row">
+												<li>2016-12-11 客户给点了一个赞</li>
+												<li>2016-12-11 客户给点了一个赞</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--聊天记录-->
+								<div class="cust-home">
+									<div class="cell-record cust-record" id="cell_record">
+										<ul class="cell-record-list">
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt">根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，截至2016年第三季度，我国固定宽带家庭普及率达到59.6%，价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，享受200M电信光宽带+3GB流量+ 700分钟通话的套餐服务。价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt"><img class="cell-img" src="lib/img/icon-h.jpg"></div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">
+													<div class="char-item">
+														<h4 class="char-h4">订单确认通知</h4>
+														<p class="char-pt">12月20日</p>
+														<p class="char-pn">您好，您的订单已经提交！</p>
+														<p class="char-pz">订单编号：<span>2016085211111</span></p>
+														<p class="char-pz">商品名称：<span>中国电信宽带</span></p>
+														<p class="char-pz">订单金额：<span>1900元</span></p>
+														<p class="char-pn">您的中国电信宽带已经帮您配好，但是快递联系不上您，请您收到信息后主动跟客服联系，谢谢！</p>
+													</div>
+												</div>
+											</li>
+											<li>								
+												<p class="cell-time">2016-12-16 18:00</p>
+											</li>
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt">价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">享受200M电信光宽带+3GB流量</div>
+											</li>
+										
+										</ul>
+									</div>
+									<div class="cell-item">
+										<div class="cell-item-box">
+											<ul class="customer-page-item flex-cell">
+												<li><a class="page-flt"><i></i></a></li>
+												<li class="page-act"><a class="page-text">1</a></li>
+												<li><a class="page-text">2</a></li>
+												<li><a class="page-text">3</a></li>
+												<li><a class="page-text">4</a></li>
+												<li><a class="page-text">5</a></li>
+												<li><a class="page-text">6</a></li>
+												<li><a class="page-text">7</a></li>
+												<li><a class="page-frt"><i></i></a></li>																								
+											</ul>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</div>	
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script>
+			$(function(){
+				$(".cust-row-list").eq(0).show();
+				$(".cust-ct").click(function() {
+					$(this).toggleClass('cust-visible').siblings().removeClass('cust-visible');
+					$(this).next(".cust-row-list").slideToggle().siblings(".cust-row-list").slideUp();
+				});
+				$('.cust-row').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.cust-mt').outerHeight() + 'px');
+				$('.cust-item-mt').css('height',$(window).height() - $('.main-header').outerHeight() - $('.cust-list-h4').outerHeight() - $('.cust-item-title').outerHeight() -$('.cust-page').outerHeight() + 'px');				
+				
+				$('.cust-tab-line li').click(function() {
+					var $index = $(this).index();
+					$(this).addClass('cust-curr').siblings().removeClass('cust-curr');
+					$(".cust-come .cust-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+					$('.cell-record').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.cust-but').outerHeight() - $('.cust-tab').outerHeight() - $('.cell-item').outerHeight() + 'px');
+					$('.cell-record').css('min-height',$(window).height() - $('.main-header').outerHeight() - $('.cust-but').outerHeight() - $('.cust-tab').outerHeight() - $('.cell-item').outerHeight() + 'px');
+					//alert($('.cust-tab').outerHeight())
+				});
+				//用户资料头像大小
+				var cust_img = $(window).height() - $('.main-header').outerHeight() - $('.cust-but').outerHeight() - $('.cust-tab').outerHeight() - $('.cust-box').outerHeight() - $('.cust-pt').outerHeight() - $('.cell-access').outerHeight() - $('.cust-mess').outerHeight() - $('.cust-fott').outerHeight();
+				$('.cust-lot').css('height',cust_img * 2/3 + 'px');		
+				$('.cust-lot').css('width',cust_img * 2/3 + 'px');			
+				$('.cust-magin').css('margin-top',cust_img * 1/6 + 'px');	
+				$('.cust-magin').css('margin-bottom',cust_img * 1/16 + 'px');	
+				$('.cust-pt').css('margin-bottom',cust_img * 1/16 + 'px');	
+				
+				//展开切换
+				$('.cust-abs img').click(function(){
+					$('.cust-abs').toggleClass('cust-right');
+					$('.cust-cent-frt').toggleClass('cust-width');	
+					$('.cust-item').toggleClass('cust-lust');
+				});
+				//全选及反选
+				$("#cust").click(function() {
+					if ($(this).is(':checked')) {
+						$("input[name='cust-name']").prop("checked","checked"); 
+					} else{
+						$("input[name='cust-name']").removeAttr("checked");
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>

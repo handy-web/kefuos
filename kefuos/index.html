@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>统计</title>
+	    <meta charset="utf-8">
+	    <link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	    <link rel="stylesheet" href="lib/css/layout.css" />
+	    <script type="text/javascript" src="lib/js/echarts.common.min.js" ></script>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<div class="main-nov">
+			<div class="main-header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="main-cent">
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li>
+									<a href="conver.html">
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li>
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>									
+								</li> 
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li>
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li class="act">
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li>
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li>
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--右边内容-->
+				
+					<div class="main-cent-row">
+						<div class="index-row flex">
+							<div class="flex-hd"></div>
+							<div class="index-row-line flex-rt flex-cell">
+								<a>今天</a>
+								<a>昨天</a>
+								<a>近一周</a>
+								<a>近一月</a>
+							</div>
+						</div>
+						
+						<div class="flex index-ins">
+							<ul class="flex-hd index-ins-row">
+								<li class="ins-act"><a>首页</a></li>
+								<li><a>有效咨询</a></li>
+								<li><a>无效咨询</a></li>
+								<li><a class="last-child">留言咨询</a></li>
+							</ul>
+							<div class="index-ins-rt">
+								<div class="index-post">
+									<div class="span-text flex-hd flt">当前客服：</div>
+									<div class="select index-select flt">
+										<span class="placeholder index-der">takecols</span>
+										<ul>
+											<li>takecols</li>
+											<li>jack</li>
+											<li>luoxi</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div id="index_cen">
+							<!--首页-->
+							<div class="index-home" style="display: block;">
+								<div class="index-item">
+									<div class="index-item-d1">
+										<h3>综合数据</h3>								
+										<ul class="index-list">
+											<li>
+												<h4></h4>
+												<h4>总客户数</h4>
+												<h4>首次访问</h4>
+												<h4>老客户</h4>
+												<h4>有效咨询数</h4>
+												<h4>静默数</h4>
+												<h4>有效会话数</h4>
+												<h4>订单数</h4>
+												<h4>成交额</h4>
+												<h4>百粉成交率</h4>												
+											</li>
+											<li>
+												<p>全部</p>
+												<p>4</p>
+												<p>5</p>
+												<p>4</p>
+												<p>3</p>
+												<p>5</p>
+												<p>2</p>
+												<p>15</p>
+												<p>12</p>
+												<p class="last-text">3</p>
+											</li>
+											<li>
+												<p>我的</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p>0</p>
+												<p class="last-text">0</p>
+											</li>
+											<li>
+												<p>比例</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>0%</p>
+												<p>--</p>
+												<p class="last-text">--</p>
+											</li>
+										</ul>
+									</div>
+									<div class="index-item-d2 flex-cell">
+										<div class="index-item-ft1 flex-hd">
+											<h4 class="item-ft-h4">实时数据</h4>
+											<div class="index-tab">
+												<div class="flt index-tab-list item-rt">
+													<ul class="item-line item-l">
+														<li><h3 class="item-line-h3">我的客户</h3></li>
+														<li>
+															<div class="flex"><p class="flex-hd">当日客户：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">等待接待：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">新客户：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">老客户：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">有咨询：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+													</ul>
+												</div>
+												<div class="flt index-tab-list">							
+													<ul class="item-line">
+														<li><h3 class="item-line-h3">我的业绩</h3></li>
+														<li>
+															<div class="flex"><p class="flex-hd">当日订单：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">当日成交：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">咨询率：</p><p class="flex-rt color-num">0</p></div>
+														</li>
+														<li>
+															<div class="flex"><p class="flex-hd">百粉转化率：</p><p class="flex-rt color-num">0</p></div>
+														</li>					
+													</ul>
+												</div>
+											</div>
+										</div>
+										
+										<div class="index-item-ft3 flex-hd">
+											<h4>客户排名</h4>
+											<div class="index-item-rt">
+												<ul class="index-item-row">
+													<li>
+														<h3>排名</h3>
+														<h3>客服</h3>
+														<h3>客户数</h3>
+														<h3>有效咨询数</h3>
+														<h3>总会话数</h3>
+														<h3>订单数</h3>
+														<h3>成交额</h3>
+														<h3>百粉成交额</h3>												
+													</li>
+													<li>
+														<p><img class="ranking" src="lib/img/icon-ranking-one.png"/></p>
+														<p><span class="flex index-cnt"><img class="cur-img" src="lib/img/icon-row-name.png"/><span class="span-le">林俊杰</span></span></p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p class="p-last">5%</p>
+													</li>
+													<li>
+														<p><img class="ranking" src="lib/img/icon-ranking-two.png"/></p>
+														<p><span class="flex index-cnt"><img class="cur-img" src="lib/img/icon-row-name.png"/><span class="span-le">林俊杰</span></span></p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p class="p-last">5%</p>
+													</li>
+													<li class="row-tree">
+														<p><img class="ranking" src="lib/img/icon-ranking-tree.png"/></p>
+														<p><span class="flex index-cnt"><img class="cur-img" src="lib/img/icon-row-name.png"/><span class="span-le">林俊杰</span></span></p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p class="p-last">5%</p>
+													</li>
+													<li>
+														<div class="index-pos"><ins>我的排名</ins></div>
+														<p><img class="ranking" src="lib/img/icon-ranking-one.png"/></p>
+														<p><span class="flex index-cnt"><img class="cur-img" src="lib/img/icon-row-name.png"/><span class="span-le">林俊杰</span></span></p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p>2</p>
+														<p class="p-last">5%</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!--有效咨询-->
+							
+							<div class="index-home">
+								<div class="counse-box">
+									<h3 class="counse-h3">有效咨询</h3>
+									<ul class="flex-cell counse-line">
+										<li>
+											<h4 class="counse-h4">有效咨询</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">首次响应时间</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>秒</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">平均响应时间</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>秒</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">平均咨询用时</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>秒</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">24小时下单</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>个</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">当天内订单</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>个</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">3天内订单</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>个</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">平均消息条数</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>条</p>
+												<p>环比---</p>
+											</div>										
+										</li>								
+									</ul>
+								</div>
+								<div class="index-normal">
+									<div class="index-cte">
+										<div class="index-selt">
+											<div class="select index-sct">
+												<span class="placeholder index-bol">选择指标</span>
+												<ul>
+													<li>测试一</li>
+													<li>测试二</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="counse-echarts" id="ec_consul" ></div>
+							</div>
+							<!--无效咨询-->
+							<div class="index-home">
+								<div class="counse-box">
+									<h3 class="counse-h3">无效咨询</h3>
+									<ul class="flex-cell counse-line">
+										<li>
+											<h4 class="counse-h4">无效咨询</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">首次响应时间</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>秒</p>
+												<p>环比---</p>
+											</div>										
+										</li>						
+									</ul>
+								</div>
+								<div class="index-normal">
+									<div class="index-cte">
+										<div class="index-selt">
+											<div class="select index-sct">
+												<span class="placeholder index-bol">选择指标</span>
+												<ul>
+													<li>测试一</li>
+													<li>测试二</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="counse-echarts" id="invalid_consul" ></div>
+							</div>
+							<div class="index-home">
+								<div class="counse-box">
+									<h3 class="counse-h3">留言咨询</h3>
+									<ul class="flex-cell counse-line">
+										<li>
+											<h4 class="counse-h4">留言总数</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">未处理量</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>	
+										<li>
+											<h4 class="counse-h4">已处理量</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">24小时处理量</h4>
+											<div class="counse-num">
+												<p><ins>0</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>	
+									</ul>
+									<ul class="flex-cell counse-line counse-border">
+										<li>
+											<h4 class="counse-h4">处理率</h4>
+											<div class="counse-num">
+												<p><ins>0%</ins></p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">有效咨询</h4>
+											<div class="counse-num">
+												<p><ins>0%</ins>次</p>
+												<p>环比---</p>
+											</div>										
+										</li>											
+									</ul>
+								</div>
+								<div class="index-normal">
+									<div class="index-cte">
+										<div class="index-selt">
+											<div class="select index-sct">
+												<span class="placeholder index-bol">选择指标</span>
+												<ul>
+													<li>测试一</li>
+													<li>测试二</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="counse-echarts-leav" id="message_consul" ></div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>				
+			</div>			
+		</div>
+		
+		<script>
+		$().ready(function() {
+			$('.index-ins-row li').click(function() {
+				var $index = $(this).index();
+				$(this).addClass('ins-act').siblings().removeClass('ins-act');
+				$("#index_cen .index-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+			});
+		
+		});
+		</script>
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('ec_consul'));
+
+			// 指定图表的配置项和数据
+			option = {
+				title: {
+					text: '有效咨询趋势图',
+			        left: 'center',
+			        top: '0',
+			        textStyle:{
+			        color :'#333',					
+			        }
+				},
+				tooltip: {
+					show:true,
+			        backgroundColor:'#384157',
+			        borderColor:'#384157',
+			        borderWidth:1,
+			        //formatter:'{b}:{c}',
+			        extraCssText:'box-shadow: 0 0 5px rgba(0, 0, 0, 1)'
+				},
+				legend: {
+					bottom :0,
+					data: ['有效咨询', '平均消息条数', '转入咨询', '平均响应时间', '平均咨询用时', '24小时下单', '3天内下单', '当天内下单']
+				},
+				grid: {
+					left: '6%',
+					right: '4%',
+					bottom: '10%',
+					containLabel: true
+				},
+				toolbox: {
+					left: '6%',
+		            top :'0',
+		            feature: {		                
+			            magicType: {type: ['line', 'bar']},
+			           // restore: {},
+		                saveAsImage: {}
+		            }
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['2016/12/15', '2016/12/16', '2016/12/17', '2016/12/18', '2016/12/19', '2016/12/20', '2016/12/21']
+				},
+				
+				 yAxis: { 
+			        ayisLine:{
+			            show:false
+			        },
+			         axisLabel: {
+			            textStyle: {
+			                color: '#5c6076'
+			            }  
+			        },
+			        splitLine:{
+			            show:true,
+			            lineStyle:{			     
+			          	      color: '#ccc',
+	                          type: 'dashed'                  
+			            }
+			        },
+			        axisLine: {
+			                lineStyle: {
+			                    color: '#fff'
+			                }
+			            }
+			    },
+				
+				series: [{
+					name: '有效咨询',
+					type: 'line',
+					stack: '总量',
+					data: [10, 18, 20, 24, 26, 30, 35]
+				}, {
+					name: '平均消息条数',
+					type: 'line',
+					stack: '总量',
+					data: [10, 14, 18, 24, 29, 30, 31]
+				},{
+					name: '转入咨询',
+					type: 'line',
+					stack: '总量',
+					data: [12, 13, 15, 16, 20, 22, 32]
+				},{
+					name: '平均响应时间',
+					type: 'line',
+					stack: '总量',
+					data: [12, 16, 21, 34, 38, 40, 50]
+				},{
+					name: '平均咨询用时',
+					type: 'line',
+					stack: '总量',
+					data: [10, 15, 21, 34, 39, 42, 56]				
+				},{
+					name: '24小时下单',
+					type: 'line',
+					stack: '总量',
+					data: [20, 32, 34, 36, 44, 56, 60]				
+				},{
+					name: '3当天内下单',
+					type: 'line',
+					stack: '总量',
+					data: [15, 25, 30, 40, 45, 52, 65]				
+				},{
+					name: '当天内下单',
+					type: 'line',
+					stack: '总量',
+					data: [18, 19, 28, 30, 42, 58, 68]				
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('invalid_consul'));
+
+			// 指定图表的配置项和数据
+			option = {
+				title: {
+					text: '无效咨询趋势图',
+			        left: 'center',
+			        top: '0',
+			        textStyle:{
+			        color :'#333',	
+			        }
+				},
+				tooltip: {
+					show:true,
+			        backgroundColor:'#384157',
+			        borderColor:'#384157',
+			        borderWidth:1,
+			        //formatter:'{b}:{c}',
+			        extraCssText:'box-shadow: 0 0 5px rgba(0, 0, 0, 1)'
+				},
+				legend: {
+					bottom :0,
+					data: ['无效咨询', '平均等待时间']
+				},
+				grid: {
+					left: '6%',
+					right: '4%',
+					bottom: '10%',
+					containLabel: true
+				},
+				toolbox: {
+					left: '6%',
+		            top :'0',
+		            feature: {
+						magicType: {type: ['line', 'bar']},
+		                saveAsImage: {}
+		            }
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['2016/12/15', '2016/12/16', '2016/12/17', '2016/12/18', '2016/12/19', '2016/12/20', '2016/12/21']
+				},
+				
+				 yAxis: { 
+			        ayisLine:{
+			            show:false
+			        },
+			         axisLabel: {
+			            textStyle: {
+			                color: '#5c6076'
+			            }  
+			        },
+			        splitLine:{
+			            show:true,
+			            lineStyle:{			     
+			          	      color: '#ccc',
+	                          type: 'dashed'                  
+			            }
+			        },
+			        axisLine: {
+			                lineStyle: {
+			                    color: '#fff'
+			                }
+			            }
+			    },
+				
+				series: [{
+					name: '无效咨询',
+					type: 'line',
+					stack: '总量',
+					data: [9, 18, 20, 24, 26, 30, 35]
+				}, {
+					name: '平均等待时间',
+					type: 'line',
+					stack: '总量',
+					data: [10, 14, 18, 24, 29, 40, 51]
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('message_consul'));
+
+			// 指定图表的配置项和数据
+			option = {
+				title: {
+					text: '留言质量趋势图',
+			        left: 'center',
+			        top: '0',
+			        textStyle:{
+			        color :'#333',					
+			        }
+				},
+				tooltip: {
+					show:true,
+			        backgroundColor:'#384157',
+			        borderColor:'#384157',
+			        borderWidth:1,
+			        //formatter:'{b}:{c}',
+			        extraCssText:'box-shadow: 0 0 5px rgba(0, 0, 0, 1)'
+				},
+				legend: {
+					bottom :0,
+					data: ['留言总量', '未处理量','已处理留言', '留言处理量']
+				},
+				grid: {
+					left: '6%',
+					right: '6%',
+					bottom: '12%',
+					containLabel: true
+				},
+				toolbox: {
+					left: '6%',
+		            top :'0',
+		            feature: {
+						magicType: {type: ['line', 'bar']},
+		                saveAsImage: {}
+		            }
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['2016/12/15', '2016/12/16', '2016/12/17', '2016/12/18', '2016/12/19', '2016/12/20', '2016/12/21']
+				},
+				
+				 yAxis: { 
+			        ayisLine:{
+			            show:false
+			        },
+			         axisLabel: {
+			            textStyle: {
+			                color: '#5c6076'
+			            }  
+			        },
+			        splitLine:{
+			            show:true,
+			            lineStyle:{			     
+			          	      color: '#ccc',
+	                          type: 'dashed'                  
+			            }
+			        },
+			        axisLine: {
+			                lineStyle: {
+			                    color: '#fff'
+			                }
+			            }
+			    },
+				
+				series: [{
+					name: '留言总量',
+					type: 'line',
+					stack: '总量',
+					data: [9, 18, 20, 24, 26, 30, 35]
+				}, {
+					name: '未处理量',
+					type: 'line',
+					stack: '总量',
+					data: [10, 14, 18, 24, 29, 40, 51]
+				},{
+					name: '已处理留言',
+					type: 'line',
+					stack: '总量',
+					data: [18, 24, 28, 30, 39, 40, 61]
+				},{
+					name: '留言处理量',
+					type: 'line',
+					stack: '总量',
+					data: [20, 34, 38, 44, 59, 70, 85]
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+		
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+	</body>
+</html>

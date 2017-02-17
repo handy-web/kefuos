@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>登录</title>
+	    <meta charset="utf-8">
+	    <link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body style="background: url(lib/img/icon-lg-bg.jpg) no-repeat;">
+		
+		<div class="login-item">
+			<div class="flex login-item-title">
+				<img src="lib/img/icon-lg-logo.png" />
+				<h4>微桥智能多营销云</h4>
+			</div>
+			<div class="login-row login-row-past">
+				<ul class="login-line">
+					<li><input class="imt input-focus" type="text" name="" placeholder="用户名" /><i class="i-user"></i></li>
+					<li><input class="imt input-focus" type="text" name="" placeholder="密码" /><i class="i-psw"></i></li>
+					<li><input class="imt imt-width flt input-focus" type="text" name="" placeholder="验证码" /><a class="imt-code frt"><img src="lib/img/icone-lg-yzm.png"/></a></li>
+				</ul>
+				<a class="login-but">登录</a>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('.login-item').css('margin-top',($(window).height() - $('.login-item').outerHeight()) / 2 + 'px');
+			});
+		</script>
+	</body>
+</html>

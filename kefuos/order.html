@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>订单</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<script type="text/javascript" src="lib/js/echarts.common.min.js" ></script>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<div class="main-nov">
+			<div class="main-header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="main-cent">
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li>
+									<a href="conver.html">
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li>
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>
+								</li>
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li class="act">
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li>
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li>
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--右边内容-->
+				
+					<div class="main-cent-row">
+						<div class="index-row flex">
+							<div class="flex-hd"></div>
+							<div class="index-row-line flex-rt flex-cell">
+								<a>今天</a>
+								<a>昨天</a>
+								<a>近一周</a>
+								<a>近一月</a>
+							</div>
+						</div>
+						<div class="flex order-ins">
+							<ul class="order-ins-row">
+								<li class="order-act"><a class="first-child">订单统计</a></li>
+								<li><a>订单明细</a></li>								
+							</ul>							
+						</div>	
+						<div id="order_cen">
+							<!--订单统计-->
+							<div class="order-home" style="display: block;">
+								<div class="counse-box">
+									<h3 class="counse-h3">订单统计</h3>
+									<ul class="flex-cell counse-line order-bottom">
+										<li>
+											<h4 class="counse-h4">订单金额</h4>
+											<div class="counse-num">
+												<p><ins>1950</ins>元</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">订单数量</h4>
+											<div class="counse-num">
+												<p><ins>10</ins>个</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">百粉成交额</h4>
+											<div class="counse-num">
+												<p><ins>10000</ins>元</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">粉丝数</h4>
+											<div class="counse-num">
+												<p><ins>300</ins>人</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">咨询数</h4>
+											<div class="counse-num">
+												<p><ins>100</ins>人</p>
+												<p>环比---</p>
+											</div>										
+										</li>
+										<li>
+											<h4 class="counse-h4">静默数</h4>
+											<div class="counse-num">
+												<p><ins>50</ins>人</p>
+												<p>环比---</p>
+											</div>										
+										</li>																
+									</ul>
+									<div class="index-normal">
+										<div class="index-cte">
+											<div class="index-selt">
+												<div class="select index-sct">
+													<span class="placeholder index-bol">选择指标</span>
+													<ul>
+														<li>测试一</li>
+														<li>测试二</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="counse-echarts" id="order_consul" ></div>
+								</div>
+							</div>
+							<!--订单明细-->
+							<div class="order-home">
+								<div class="motor-box">
+									<div class="motor-row flex order-tm">	
+										<div class="motor-row-search order-buts">
+											<input type="text" id="queryName" name="" placeholder="按昵称、电话、姓名查询">											
+										</div>
+										<div class="span-txt">创建日期：</div>								
+										<div class="motor-imt order-cur">
+											<input type="text" id="datepicker3" name="" readonly placeholder="选择日期">
+											<i class="order-it"></i>
+										</div>
+										<div class="order-txt span-txt">至</div>								
+										<div class="motor-imt order-cur">
+											<input type="text" id="datepicker4" name="" readonly placeholder="选择日期">
+											<i class="order-it"></i>
+										</div>
+										<div class="span-txt">订单状态：</div>								
+										<div class="select motor-select order-row-width order-mag">
+											<span class="motor-pla motor-der order-hes">全部</span>
+											<ul>
+												<li>测试一</li>
+												<li>测试二</li>												
+											</ul>
+										</div>
+										<div class="span-txt">付款方式：</div>								
+										<div class="select motor-select order-row-width order-mag">
+											<span class="motor-pla motor-der order-hes">全部</span>
+											<ul>
+												<li>测试一</li>
+												<li>测试二</li>												
+											</ul>
+										</div>
+										<!--<div class="span-txt">售后状态：</div>								
+										<div class="select motor-select order-row-width order-mag">
+											<span class="motor-pla motor-der order-hes">全部</span>
+											<ul>
+												<li>测试一</li>
+												<li>测试二</li>												
+											</ul>
+										</div>-->
+										<div class="order-confirm flex-cell">
+											<a>查询</a>
+											<a>导出</a>
+											<a>清空</a>
+										</div>	
+									</div>
+								</div>
+								
+								<div class="order-item">
+									<!--<h3 class="order-h3">订单明细</h3>-->
+									<ul class="order-item-titer">
+										<li>
+											<h4 class="order-h4-12">订单编号</h4>
+											<h4 class="order-h4-6">客户姓名</h4>
+											<h4 class="order-h4-9">微信昵称</h4>											
+											<h4 class="order-h4-8">联系电话</h4>
+											<h4 class="order-h4-6">订单金额</h4>
+											<h4 class="order-h4-6">订单状态</h4>
+											<h4 class="order-h4-12">创建日期</h4>
+											<h4 class="order-h4-8">付款方式</h4>											
+											<h4 class="order-h4-8">客服姓名</h4>
+											<h4 class="order-h4-8">售前客服</h4>
+											<h4 class="order-h4-8">售前分组</h4>
+											<h4 class="order-h4-9">操作</h4>
+										</li>
+									</ul>
+									<ul class="order-item-table" id="order_row">
+										<li>
+											<div class="order-col-12">148237007301350</div>
+											<div class="order-col-6">林俊杰</div>
+											<div class="order-col-9">奔跑吧兄弟奔跑吧兄弟</div>
+											<div class="order-col-8">13866666666</div>
+											<div class="order-col-6">888888</div>
+											<div class="order-col-6">已签收</div>
+											<div class="order-col-12">2016-10-12 15:00:00</div>
+											<div class="order-col-8">代收</div>
+											<div class="order-col-8">蓝精灵</div>
+											<div class="order-col-8">小马哥</div>
+											<div class="order-col-8">售前分组测试</div>											
+											<div class="order-col-9">
+												<div class="order-button">
+													<a class="order-delete"></a>
+													<a class="order-reduce"></a>
+													<a class="order-view"></a><!--查看-->
+												</div>
+											</div>				
+										</li>		
+										<li>
+											<div class="order-col-12">148237007301350</div>
+											<div class="order-col-6">林俊杰</div>
+											<div class="order-col-9">奔跑吧兄弟奔跑吧兄弟</div>
+											<div class="order-col-8">13866666666</div>
+											<div class="order-col-6">888888</div>
+											<div class="order-col-6">已签收</div>
+											<div class="order-col-12">2016-10-12 15:00:00</div>
+											<div class="order-col-8">代收</div>
+											<div class="order-col-8">蓝精灵</div>
+											<div class="order-col-8">小马哥</div>
+											<div class="order-col-8">售前分组测试</div>											
+											<div class="order-col-9">
+												<div class="order-button">
+													<a style="display: none;" class="order-delete"></a>
+													<a style="display: none;" class="order-reduce"></a>
+													<a style="display: block;" class="order-view"></a><!--查看-->
+												</div>
+											</div>				
+										</li>		
+										<div class="order-cent">
+											<p id="moreOrders" class="chat-row-look">没有更多数据了</p>	
+											<a class="order-tmst"><i></i></a>
+										</div>															
+									</ul>
+									
+								</div>										
+								<div class="order-page">
+									<ul class="customer-page-item flex-cell">
+											<li><a class="page-flt"><i></i></a></li>
+											<li class="page-act"><a class="page-text">1</a></li>
+											<li><a class="page-text">2</a></li>
+											<li><a class="page-text">3</a></li>
+											<li><a class="page-text">4</a></li>
+											<li><a class="page-text">5</a></li>
+											<li><a class="page-text">6</a></li>
+											<li><a class="page-text">7</a></li>
+										<li><a class="page-frt"><i></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>						
+						<!--订单详情-->
+						<div class="order-detail">
+							<div class="order-line">
+								<h4 class="col-h4">订单详情 2016-12-23 ：15:00:00</h4>									
+								<ul class="order-tab">
+									<li>
+										<p class="col-bor col-6">昵称</p>
+										<p class="col-19">奔跑吧兄弟</p>
+										<p class="col-6">订单总额</p>
+										<p class="col-19 col-color">1980</p>
+										<p class="col-6">付款方式</p>
+										<p class="col-19 col-color">代收</p>
+										<p class="col-6">订单状态</p>
+										<p class="col-19 col-color-sign">已签收</p>
+									</li>
+									<li>
+										<p class="col-bor col-6">姓名</p>
+										<p class="col-19">林俊杰</p>
+										<p class="col-6">电话</p>
+										<p class="col-19">13600000000</p>
+										<p class="col-6">地址</p>									
+										<p class="col-44">广东省深圳市南山区科技园科技园科技园科技园</p>
+									</li>
+									<li class="col-height">
+										<p class="col-bor col-6">备注</p>
+										<p class="col-44">林俊杰...........</p>
+										<p class="col-6">备注2</p>																			
+										<p class="col-44">广东省深圳市南山区科技园科技园科技园科技园</p>
+									</li>
+									<li>
+										<p class="col-bor col-6">审核意见</p>
+										<p class="col-44">111222</p>										
+										<p class="col-6">审核日期</p>
+										<p class="col-19 col-color">2016-12-23 12:15:00</p>
+										<p class="col-6">审核人</p>
+										<p class="col-19 col-color">小马哥</p>
+									</li>
+									<li>
+										<p class="col-bor col-6">核单备注</p>
+										<p class="col-44">111222</p>										
+										<p class="col-6">核单日期</p>
+										<p class="col-19 col-color">2016-12-23 12:15:00</p>
+										<p class="col-6">核单人</p>
+										<p class="col-19 col-color">小马哥</p>
+									</li>
+									<li>
+										<p class="col-bor col-6">快递单号</p>
+										<p class="col-19">1552233333444</p>
+										<p class="col-6">物流公司</p>
+										<p class="col-19 col-color">圆通快递</p>
+										<p class="col-6">发货日期</p>
+										<p class="col-19 col-color">2016-12-23 12:15:00</p>
+										<p class="col-6">经手人</p>
+										<p class="col-19 col-color">小马哥</p>
+									</li>
+									<li>
+										<p class="col-bor col-6">入账金额</p>
+										<p class="col-44">9998</p>										
+										<p class="col-6">入账日期</p>
+										<p class="col-19 col-color">2016-12-23 12:15:00</p>
+										<p class="col-6">财务</p>
+										<p class="col-19 col-color">小马哥</p>
+									</li>
+								</ul>
+								<ul class="order-title">
+									<li>
+										<h4 class="col-ht-23">产品名</h4>
+										<h4 class="col-ht-18">单价</h4>
+										<h4 class="col-ht-18">数量</h4>
+										<h4 class="col-ht-18">优惠</h4>
+										<h4 class="col-ht-23">合计</h4>
+									</li>
+								</ul>
+								<ul class="order-wares" id="orderItemList">									
+									<li>
+										<p class="col-p-23">中国电信</p>
+										<p class="col-p-18">88</p>
+										<p class="col-p-18">4</p>
+										<p class="col-p-18">10</p>
+										<p class="col-p-23">352</p>
+									</li>									
+								</ul>
+								<div class="order-cte">
+									<a class="order-back">返回</a>
+									<!--<a class="order-confe">确认</a>-->
+								</div>
+							</div>
+						</div>
+						<!--遮罩	透明	-->		
+						<div class="mask-item-bg"></div>
+							
+						<!--录入订单-->
+						<div class="ord-box">
+							<div class="matter-box-title">
+								<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+								<div class="matter-box-pre">录入订单</div>
+								<div class="matter-box-rt"><a class="matter-close ord-close"><i></i></a></div>
+							</div>
+							<div class="ord-row">				
+								<ul class="ord-line">
+									<li>
+										<div class="flex ord-row-flex">
+											<div class="ord-row-flt">
+												<span class="ord-span">昵称：</span><input class="imt-ord imt-ord-hd" type="text" name="" placeholder="林俊杰" />
+											</div>
+											<div class="ord-row-flt">
+												<span class="ord-span">姓名：</span><input class="imt-ord imt-ord-hd" type="text" name="" placeholder="林俊杰" />
+											</div>
+											<div class="flex-rt flex-hd ord-row-hd">
+												<span class="ord-span-rt">联系方式：</span><input class="imt-ord imt-ord-rt" type="text" name="" placeholder="13600000000" />
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="flex ord-row-flex">
+											<div class="ord-row-addr">
+												<span class="ord-span-addr">地址：</span><input class="imt-ord imt-ord-addr" type="text" name="" placeholder="广东省深圳市" />
+											</div> 														
+										</div>
+									</li>
+									<li>
+										<div class="ord-cent flex">
+											<span class="ord-st">付款方式：</span>
+											<ul class="ord-list flex">
+												<li class="list-act">代收</li>
+												<li>预付</li>
+											</ul>
+											<ul class="flex">
+												<li>
+													<span class="ord-st-qx">预计签收后：</span>
+												</li>
+												<li>
+													<div class="ord-ct">
+														<input class="imt-ord" type="text" name="" placeholder="5" />
+													</div>
+												</li>
+												<li>
+													<span class="ord-st-qx">天售后</span>
+												</li>
+											</ul>
+										</div>
+										
+									</li>
+									<li>
+										<div class="flex-cell ord-top">
+											<div class="flex-hd ord-top-ft">
+												<span class="ord-text-spn">备注：</span>
+												<textarea id="ord_t1" class="ord-textarea" rows="2" cols="2" placeholder="请输入备注"></textarea>
+											</div>
+											<div class="flex-rt ord-top-ft">
+												<span class="ord-text-spn">备注2：</span>
+												<textarea id="ord_t2" class="ord-textarea" rows="ord-textarea" rows="2" cols="2" placeholder="请输入客服备注"></textarea>
+											</div>
+										</div>																				
+									</li>
+									<li>
+										<div class="ord-item">
+											<ul class="ord-item-titer">
+												<li>
+													<h4 class="ord-h4-1">产品名</h4>
+													<h4 class="ord-h4-2">是否赠品</h4>
+													<h4 class="ord-h4-3">单价</h4>
+													<h4 class="ord-h4-3">数量</h4>
+													<h4 class="ord-h4-3">优惠</h4>
+													<h4 class="ord-h4-3">总计</h4>
+													<h4 class="ord-h4-3">操作</h4>
+												</li>
+											</ul>
+											<ul class="ord-item-table" id="ord_row">
+												<li>
+													<div class="ord-col-1">
+														<select class="ord-set">
+															<option>1</option>
+															<option>2</option>
+														</select>
+														<!--<div class="select item-select">
+															<span class="placeholder ord-item-der">请选择</span>
+															<ul>
+																<li>1</li>
+																<li>2</li>
+															</ul>
+														</div>-->
+													</div>
+													<div class="ord-col-2">
+														<div class="select item-select">
+															<span class="placeholder ord-item-der">请选择</span>
+															<ul>
+																<li>是</li>
+																<li>否</li>
+															</ul>
+														</div>
+													</div>
+													<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+													<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+													<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+													<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+													<div class="ord-col-3">
+														<div class="ord-button">
+															<a class="ord-add"></a>
+															<a class="ord-reduce"></a>
+														</div>
+													</div>						
+												</li>
+												
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<div class="ord-but"><a class="ord-confirm">保存</a></div>
+							</div>				
+						</div>					
+					</div>				
+				</div>				
+			</div>					
+		</div>
+		
+		<script>
+			$(function(){
+				$('.order-ins-row li').click(function() {
+					var $index = $(this).index();
+					$(this).addClass('order-act').siblings().removeClass('order-act');
+					$("#order_cen .order-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+					//订单明细高度自适应
+					var order_width = $(window).outerHeight() - $('.main-header').outerHeight() - $('.index-row').outerHeight() - $('.order-ins').outerHeight() - $('.motor-box').outerHeight() - $('.order-item-titer').outerHeight() - $('.order-page').outerHeight() * 2;
+					$('.order-item-table').css({
+						'max-height' : order_width + 'px',
+						'min-height' : order_width + 'px'
+					});
+					
+				});
+				$('.order-view').click(function(){
+					$('.order-detail').addClass('detail-act');
+					$('.order-back').click(function(){
+						$('.order-detail').removeClass('detail-act');						
+					});
+				});
+				
+			});
+		</script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('order_consul'));
+
+			// 指定图表的配置项和数据
+			option = {
+				title: {
+					text: '订单趋势图',
+			        left: 'center',
+			        top: '0',
+			        textStyle:{
+			        color :'#333',					
+			        }
+				},
+				tooltip: {
+					show:true,
+			        backgroundColor:'#384157',
+			        borderColor:'#384157',
+			        borderWidth:1,
+			        //formatter:'{b}:{c}',
+			        extraCssText:'box-shadow: 0 0 5px rgba(0, 0, 0, 1)'
+				},
+				legend: {
+					bottom :0,
+					data: ['有效咨询', '平均消息条数', '转入咨询', '平均响应时间', '平均咨询用时', '24小时下单', '3天内下单', '当天内下单']
+				},
+				grid: {
+					left: '6%',
+					right: '4%',
+					bottom: '10%',
+					containLabel: true
+				},
+				toolbox: {
+					left: '6%',
+		            top :'0',
+		            feature: {		                
+			            magicType: {type: ['line', 'bar']},
+			           // restore: {},
+		                saveAsImage: {}
+		            }
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					data: ['2016/12/15', '2016/12/16', '2016/12/17', '2016/12/18', '2016/12/19', '2016/12/20', '2016/12/21']
+				},
+				
+				 yAxis: { 
+			        ayisLine:{
+			            show:false
+			        },
+			         axisLabel: {
+			            textStyle: {
+			                color: '#5c6076'
+			            }  
+			        },
+			        splitLine:{
+			            show:true,
+			            lineStyle:{			     
+			          	      color: '#ccc',
+	                          type: 'dashed'                  
+			            }
+			        },
+			        axisLine: {
+			                lineStyle: {
+			                    color: '#fff'
+			                }
+			            }
+			    },
+				
+				series: [{
+					name: '有效咨询',
+					type: 'line',
+					stack: '总量',
+					data: [10, 18, 20, 24, 26, 30, 35]
+				}, {
+					name: '平均消息条数',
+					type: 'line',
+					stack: '总量',
+					data: [10, 14, 18, 24, 29, 30, 31]
+				},{
+					name: '转入咨询',
+					type: 'line',
+					stack: '总量',
+					data: [12, 13, 15, 16, 20, 22, 32]
+				},{
+					name: '平均响应时间',
+					type: 'line',
+					stack: '总量',
+					data: [12, 16, 21, 34, 38, 40, 50]
+				},{
+					name: '平均咨询用时',
+					type: 'line',
+					stack: '总量',
+					data: [10, 15, 21, 34, 39, 42, 56]				
+				},{
+					name: '24小时下单',
+					type: 'line',
+					stack: '总量',
+					data: [20, 32, 34, 36, 44, 56, 60]				
+				},{
+					name: '3当天内下单',
+					type: 'line',
+					stack: '总量',
+					data: [15, 25, 30, 40, 45, 52, 65]				
+				},{
+					name: '当天内下单',
+					type: 'line',
+					stack: '总量',
+					data: [18, 19, 28, 30, 42, 58, 68]				
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+		<script type="text/javascript">
+			//datepicker日期插件
+			$().ready(function() {
+				$("#datepicker3,#datepicker4").datepicker({
+					dateFormat: "yy-mm-dd"		
+				});		
+			});
+		</script>
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+		<script type="text/javascript" src="lib/js/dateFormat.js" ></script>
+	</body>
+</html>

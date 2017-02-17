@@ -1,0 +1,2753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>会话</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head> 
+	<body>
+		<div class="main-nov">
+			<div class="main-header" id="main_header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!--
+            	作者：handy
+            	时间：2016-12-16
+            	描述：图标全部都更新
+            -->
+			<div class="main-cent">
+				<div class="init-mask-conversation" style="display: none;"></div>					
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li class="act">
+									<a>
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li>
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>									
+								</li> 
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li>
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li>
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li>
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!--左侧内容-->
+					<div class="main-cent-mt">				
+						<div class="sout-row">							
+							<div class="sout-row-tab">
+								<ul class="sout-row-box">
+									<li class="current">我的访客</li>
+									<li>最近联系</li>
+								</ul>
+							</div>
+						</div>
+					
+						<div id="content">
+							<div class="nav-home" style="display: block;">
+								<!--等待接待-->
+							    <a class="mt-faq-trigger content-visible" href="#0">
+									<label>等待接待</label>
+									<div class="mt-ft">15</div> 
+								</a>
+								<div class="mt-faq-content">
+									<ul class="cont-line" id="style-1">
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">9</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<em class="cn-n"></em><em class="cn-z"></em><em class="cn-b"></em>
+														<div class="box-date">2016/12/08</div>														
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?由各种物质组成的巨型球状天体?由各种物质组成的巨型球状天体?由各种物质组成的巨型球状天体?由各种物质组成的巨型球状天体?</p>													
+												</div>
+												<span class="box-clot"><i class="box-x"></i></span>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>	
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<!--<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>-->
+													</h4>
+													<p class="box-ptm"><!--由各种物质组成的巨型球状天体?--></p>
+												</div>
+												<span class="box-clot"><i class="box-x"></i></span>
+												<span class="box-row"><i class="box-top" title="置顶"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+												
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+									</ul>											
+								</div>
+								<!--正在接待-->
+								<a class="mt-faq-trigger" href="#0">
+									<label>正在接待</label>
+									<div class="mt-ft">120</div>
+								</a>
+								<div class="mt-faq-content">
+									<ul class="cont-line" id="style-2">
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<em class="cn-n"></em><em class="cn-z"></em><em class="cn-b"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+									</ul>											
+								</div>
+								<!--尚未回复-->
+								<a class="mt-faq-trigger" href="#0">
+									<label>尚未回复</label>
+									<div class="mt-ft">20</div>
+								</a>
+								<div class="mt-faq-content">
+									<ul class="cont-line" id="style-3">
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-h.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<em class="cn-n"></em><em class="cn-z"></em><em class="cn-b"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+										
+										<li>
+											<a class="box-appmsg">
+												<div class="box-hd">
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>最是蝶恋花（行客）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>
+									</ul>											
+								</div>
+								<!--已离开-->
+								<a class="mt-faq-trigger" href="#0">
+									<label>已离开</label>
+									<div class="mt-ft">120</div>
+								</a>
+								<div class="mt-faq-content">
+								<ul class="cont-line" id="style-4">
+									<li>
+										<a class="box-appmsg">
+											<div class="box-hd">
+												<i class="cn-i">2</i>
+												<img class="box-m-img" src="lib/img/icon-w.jpg" />
+											</div>
+											<div class="box-fd">
+												<h4 class="box-h4">
+													<label>しovの遨游（絮辰）</label>
+													<em class="cn-n"></em><em class="cn-z"></em><em class="cn-b"></em>
+													<div class="box-date">2016/12/08</div>
+												</h4>
+												<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+											</div>
+											<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+										</a>
+									</li>
+									<li>
+										<a class="box-appmsg">
+											<div class="box-hd">
+												<i class="cn-i">2</i>
+												<img class="box-m-img" src="lib/img/icon-h.jpg" />
+											</div>
+											<div class="box-fd">
+												<h4 class="box-h4">
+													<label>しovの遨游（絮辰）</label>
+													<div class="box-date">2016/12/08</div>
+												</h4>
+												<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+											</div>
+											<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+										</a>
+									</li>
+									<li>
+										<a class="box-appmsg">
+											<div class="box-hd">
+												<i class="cn-i">2</i>
+												<img class="box-m-img" src="lib/img/icon-h.jpg" />
+											</div>
+											<div class="box-fd">
+												<h4 class="box-h4">
+													<label>しovの遨游（絮辰）</label>
+													<div class="box-date">2016/12/08</div>
+												</h4>
+												<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+											</div>
+											<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+										</a>
+									</li>
+									<li>
+										<a class="box-appmsg">
+											<div class="box-hd">
+												<i class="cn-i">2</i>
+												<img class="box-m-img" src="lib/img/icon-h.jpg" />
+											</div>
+											<div class="box-fd">
+												<h4 class="box-h4">
+													<label>しovの遨游（絮辰）</label>
+													<div class="box-date">2016/12/08</div>
+												</h4>
+												<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+											</div>
+											<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+										</a>
+									</li>
+									<li>
+										<a class="box-appmsg">
+											<div class="box-hd">
+												<img class="box-m-img" src="lib/img/icon-w.jpg" />
+											</div>
+											<div class="box-fd">
+												<h4 class="box-h4">
+													<label>最是蝶恋花（行客）</label>
+													<em class="cn-n"></em>
+													<div class="box-date">2016/12/08</div>
+												</h4>
+												<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+											</div>
+											<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+										</a>
+									</li>
+									<li class="cont-li">
+										<a class="cont-a">查看更多</a>
+									</li>
+								</ul>	
+																		
+							</div>	
+							 <a class="mt-faq-trigger" href="#0">
+								<label>取消关注</label>
+								<div class="mt-ft">15</div> 
+							</a>
+							<div class="mt-faq-content">
+								暂无关注
+							</div>
+							</div>
+							
+							
+							<!--
+                            	作者：handy
+                            	时间：2016-12-13
+                            	描述：最近内容更新12-13
+                            -->
+                          
+							<div class="nav-home">
+								<div class="mt-contact">
+									<div class="mt-contact-item">
+										<div class="mt-contact-hd"><i class="cont-one"></i></div>
+										<div class="sout-row-int">
+											<input type="text" name="" value="" placeholder="按昵称、电话、姓名查询客户"/>
+											<a class="sout-search"><i></i></a>											
+										</div>								
+									</div>
+								</div>
+								<div class="mt-contact-covers" id="contact">
+									<ul class="covers-line">
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<em class="cn-n"></em><em class="cn-z"></em><em class="cn-b"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<em class="cn-n"></em>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+										<li>
+											<a class="box-covers">
+												<div class="box-covers-hd">
+													<i class="cn-i">2</i>
+													<img class="box-m-img" src="lib/img/icon-w.jpg" />
+												</div>
+												<div class="box-fd">
+													<h4 class="box-h4">
+														<label>しovの遨游（絮辰）</label>												
+														<div class="box-date">2016/12/08</div>
+													</h4>
+													<p class="box-ptm">由各种物质组成的巨型球状天体?</p>
+												</div>
+												<span class="box-row"><i class="box-top"></i></span>
+												<span class="box-close"><i class="box-top"></i></span>
+											</a>
+										</li>	
+									</ul>											
+								</div>
+							
+							</div>
+						</div>
+					</div>
+					
+					<!--中间内容-->
+					<div class="main-cent-center">
+						<div class="item-box">
+							<div class="item-box-row">
+								<div class="item-box-row-hd">									
+									<img class="item-hover" src="lib/img/icon-h.jpg"/>
+									<a class="but">点击头像设置标签</a>
+								</div>
+								<div class="item-box-row-pre">
+									<div class="flex item-height">
+										<div class="item-bte"><input type="text" name="" value="しovの遨游" /></div>
+										<h4 class="item-box-row-h4">しovの遨游</h4>
+										<a class="item-club"></a>
+										<p class="item-box-row-p"><span>来自澳大利亚博士</span><span>男</span><span>深圳福田区</span><span>优质客户</span><span>子宫肌瘤</span></p>								
+									</div>
+									<!--<h4 class="item-box-row-h4">しovの遨游[昵称很长时右边会右移的]<input class="input" type="text" name="" placeholder="设置昵称"/></h4>							
+									<p class="item-box-row-p"><span>来自澳大利亚博士</span><span>男</span><span>深圳福田区</span><span>优质客户</span><span>子宫肌瘤</span></p>-->
+									<p class="item-box-row-ptn">
+										<textarea class="item-box-row-text" id="item_text" name="" placeholder="备注"></textarea>
+									</p>
+								</div>
+							</div>
+						</div>
+										
+						<!--聊天内容--> 
+						<div class="char-box" id="chat">						
+							<ul class="chat-row">
+								<li>
+									<p class="chat-row-look">查看更多消息</p>
+								</li>
+								<li>
+									<div class="chat-row-flt">
+										<img class="chat-row-icon flt" src="lib/img/icon-h.jpg" />
+										<div class="flt box-chat box-left">您好！</div>			
+									</div>
+								</li>	
+								<li>
+									<p class="chat-row-time">18:20</p>
+								</li>
+								<li>
+									<div class="chat-item">系统消息：客户正在浏览菜单“中国移动要上天了”</div>										
+								</li>
+								<li>
+									<div class="chat-item">
+										<p class="char-txt">系统消息：客户正在平安大厦...</p>
+										<div class="char-map"><img src="lib/img/icon-map.jpg"/></div>
+									</div>										
+								</li>
+								<li>
+									<div class="chat-row-frt">
+										<div class="flt box-chat box-right">请问您想了解点什么？</div>
+										<span><img class="chat-row-icon chat-row-left" src="lib/img/icon-w.jpg" /></span>
+									</div>
+								</li>	
+								<li>
+									<div class="chat-row-frt">
+										<div class="flt box-chat box-right">
+											<div class="char-item">
+												<h4 class="char-h4">订单确认通知</h4>
+												<p class="char-pt">12月20日</p>
+												<p class="char-pn">您好，您的订单已经提交！</p>
+												<p class="char-pz">订单编号：<span>2016085211111</span></p>
+												<p class="char-pz">商品名称：<span>中国电信宽带</span></p>
+												<p class="char-pz">订单金额：<span>1900元</span></p>
+												<p class="char-pn">您的中国电信宽带已经帮您配好，但是快递联系不上您，请您收到信息后主动跟客服联系，谢谢！</p>
+											</div>
+										</div>
+										<span><img class="chat-row-icon chat-row-left" src="lib/img/icon-w.jpg" /></span>
+									</div>
+								</li>	
+								<li>
+									<div class="chat-row-flt">
+										<img class="chat-row-icon flt" src="lib/img/icon-h.jpg" />
+										<div class="flt box-chat box-left">
+											<div class="char-item">
+												<h4 class="char-h4">订单确认通知</h4>
+												<p class="char-pt">12月20日</p>
+												<p class="char-pn">您好，您的订单已经提交！</p>
+												<p class="char-pz">订单编号：<span>2016085211111</span></p>
+												<p class="char-pz">商品名称：<span>中国电信宽带</span></p>
+												<p class="char-pz">订单金额：<span>1900元</span></p>
+												<p class="char-pn">您的中国电信宽带已经帮您配好，但是快递联系不上您，请您收到信息后主动跟客服联系，谢谢！</p>
+											</div>
+										</div>		
+									</div>
+								</li>	
+								<li>
+									<div class="chat-row-frt">
+										<div class="flt box-chat box-right">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</div>
+										<span><img class="chat-row-icon chat-row-left" src="lib/img/icon-w.jpg" /></span>										
+									</div>
+								</li>	
+								<li>
+									<div class="chat-row-flt">
+										<img class="chat-row-icon flt" src="lib/img/icon-h.jpg" />
+										<div class="flt box-chat box-left"><img class="char-img" src="lib/img/icon-h.jpg"/></div>			
+									</div>
+								</li>
+								<li>
+									<div class="chat-row-flt">
+										<img class="chat-row-icon flt" src="lib/img/icon-h.jpg" />
+										<div class="flt box-chat box-left">根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，截至2016年第三季度，我国固定宽带家庭普及率达到59.6%，较二季度提升了3个百分点。与此同时，因为高清电视的逐渐普及，家庭用户对于宽带速度的要求也相应提高。近期，江苏电信推出了针对家庭宽带用户的提速计划，也即每月需要190元，享受200M电信光宽带+3GB流量+ 700分钟通话的套餐服务。如果是提速到100M的话，价格则相应降低到109元。</div>			
+									</div>
+								</li>	
+								<li>
+									<div class="chat-row-frt">
+										<div class="flt box-chat box-right"><img class="char-img" src="lib/img/icon-w.jpg"/></div>
+										<span><img class="chat-row-icon chat-row-left" src="lib/img/icon-w.jpg" /></span>
+									</div>
+								</li>	
+							</ul>
+						</div>
+					
+						<!--输入内容-->
+						<div class="sent-box">
+							<div class="sent-row">
+								<i class="sent-img"></i>
+								<i class="sent-brow"></i>
+								<i class="sent-voice"></i>
+								<i class="sent-video"></i>
+								<i class="sent-shot"></i>
+							</div>
+							<div class="sent-box-item">
+								<textarea class="sent-textarea" id="sent_text" name="" rows="2" cols="2">您好</textarea>
+							</div>
+							<div class="sent-fot">
+								<div class="sent-fot-hd">
+									<a>返回</a>
+									<a>关闭</a>
+								</div>
+								<div class="sent-fot-rt">
+									<a class="but">发送</a>
+								</div>
+							</div>
+						</div>
+							
+					</div>
+					
+					<!--右侧内容--> 
+					<div class="main-cent-frt">
+						<div class="cell-tab">													
+							<div class="cell-row-tab">
+								<ul class="cell-box">
+									<li><span>快捷回复</span></li>
+									<li class="curr"><span>用户资料</span></li>
+									<li><span>聊天记录</span></li>
+								</ul>
+							</div>
+							<div id="frt_cen">
+								<!--快捷回复...-->
+								<!--
+                                	作者：handy
+                                	时间：2016-12-13
+                                	描述：话术内容更新12-13
+                                -->
+								<div class="cell-home">	
+									<div class="cell-row-int">
+										<input type="text" name="" value="" placeholder="快捷回复搜索"/>
+										<a class="cell-search"><i></i></a>								
+									</div>
+									<!--素材库12/13-->									
+									<div class="matter-item">										
+										<i class="matter-item-icon"></i>
+										<p>素材库</p>
+									</div>
+									<!--话术12/13-->
+									
+									<div class="menu-box">	
+										<a class="memu-bt"><i class="adds-int"></i></a>
+										<div class="verbal">我的话术</div>											
+										<div class="verbal-center" id="verbal">
+											<ul class="bord-line">
+												<li>
+													<div class="flex-hd bord-hd">
+														<a class="bord-row"><span>我的话题一我的话题一我的话题一我的话题一</span></a>
+														<!--编辑-->
+														<div class="bord-iist"><input type="text" name=""  value="我的话题一" /></div>
+													</div>
+													<div class="flex-rt bord-rt">
+														<a class="bord-modify"></a>
+														<a class="bord-delete"></a>
+														<a class="bord-adds"></a>
+													</div>
+												</li>		
+												<li>
+													<div class="flex-hd bord-hd">
+														<a class="bord-row"><span>我的话题二</span></a>
+														<!--编辑-->
+														<div class="bord-iist"><input type="text" name=""  value="我的话题一" /></div>
+													</div>
+													<div class="flex-rt bord-rt">
+														<a class="bord-modify"></a>
+														<a class="bord-delete"></a>
+														<a class="bord-adds"></a>
+													</div>
+												</li>	
+											</ul>
+										</div>
+										
+										<h2 class="menu-item-1">公共话术</h2>										
+										<!--出现滚动条-----js-260行-->
+										<div class="menu-row-1" id="menu_row">
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<div class="menu-row-2">
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>	
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>	
+											</div>
+											<h3 class="menu-item-2">恶性肌瘤(1级)</h3>
+											<div class="menu-row-2">
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>	
+												<h4 class="menu-item-3">问诊(2级)</h4>
+												<div class="menu-row-3">
+													<h5 class="menu-item-4">症状(3级)<i class="menu-icon"></i></h5>
+													<p class="menu-row-4">
+														<a class="menu-last">1、科技部副部长(4级)<em class="menu-rt"></em></a>
+														<a class="menu-last">2、中国科学院院士(4级)<em class="menu-rt"></em></a>
+													</p>
+												</div>	
+											</div>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>											
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(1级)</h3>
+											<h3 class="menu-item-2">子宫肌瘤(000级)</h3>
+										</div>
+																			
+									</div>											
+								</div>
+								
+									
+								<!--用户资料...-->
+								<div class="cell-home" style="display: block;">
+									<div class="cell-line">
+										<div class="cell-bg">
+											<div class="cell-int">
+												<span class="hi-icon cell-int-img"><img class="cell-int-img" src="lib/img/icon-h.jpg"/></span>												
+												<h3 class="cell-h3">最是蝶恋花<span>第5次来访</span></h3>
+												<div class="cell-but">
+													<a class="but-white" id="nav_wait">转接</a> <!--加id【12-13】-->
+													<a class="but-white" id="ord_int">录入订单</a>
+													<a class="but-green">邀请</a>
+												</div>
+											</div>											
+										</div>
+										<div class="cell-list">
+											<div class="cell-list-mt">
+												<ul class="cell-slit">
+													<li>
+														<h4 class="cell-slit-h4">关注日期</h4>
+														<p class="cell-slit-p">2016/12/04</p>
+													</li>
+													<li>
+														<h4 class="cell-slit-h4">最近访问</h4>
+														<p class="cell-slit-p">2016/12/04</p>
+													</li>
+													<li id="solidOrder">
+														<h4 class="cell-slit-h4">成交金额</h4>
+														<p class="cell-slit-p">1999元</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!--
+                                    	作者：handy
+                                    	时间：2016-12-18
+                                    	描述：已经调整
+                                    -->
+									<div class="cell-access">
+										<ul class="cell-access-line">
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-name.png"/>
+													<div class="cell-pn-primary">姓名</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" type="text" name="" value="" placeholder="小米"/></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-tel.png"/>
+													<div class="cell-pn-primary">电话</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" type="text" name="" value="" placeholder="13800000000"/></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex">
+													<img src="lib/img/icon-cell-wx.png"/>
+													<div class="cell-pn-primary letter">微信账号</div>
+												</div>											
+												<div class="flt cell-pn-rt"><input class="cell-pn-input" type="text" name="" value="" placeholder="最是蝶恋花_2016"/></div>
+											</li>
+											<li>
+												<div class="cell-pn-hd flt flex last-of-type">
+													<img src="lib/img/icon-cell-addr.png"/>
+													<div class="cell-pn-primary">地址</div>
+												</div>											
+												<div class="flt cell-pn-rt"><textarea class="cell-pn-textarea" id="cell_text" name="" rows="3" cols="2" placeholder="深圳市南山区"></textarea></div>
+											</li>											
+										</ul>
+									</div> 
+									<div class="cell-fott-bg">
+										<div class="cell-fott">
+											<div class="cell-fott-hd">拜访记录</div>
+											<div class="cell-fott-ft"><a>录入/查询</a></div>
+										</div>
+										<div class="cell-fott-tm">
+											<ul class="cell-fott-tm-row">
+												<li>2016-12-11 客户给点了一个赞</li>
+												<li>2016-12-11 客户给点了一个赞</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--
+                                	作者：handy
+                                	时间：2016-12-16
+                                	描述：聊天记录(内容超出自动出现滚动条)
+                              -->                             
+								<div class="cell-home">
+									<div class="cell-record" id="cell_record">
+										<ul class="cell-record-list">
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt">根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，截至2016年第三季度，我国固定宽带家庭普及率达到59.6%，价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，享受200M电信光宽带+3GB流量+ 700分钟通话的套餐服务。价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt"><img class="cell-img" src="lib/img/icon-h.jpg"/></div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">
+													<div class="char-item">
+														<h4 class="char-h4">订单确认通知</h4>
+														<p class="char-pt">12月20日</p>
+														<p class="char-pn">您好，您的订单已经提交！</p>
+														<p class="char-pz">订单编号：<span>2016085211111</span></p>
+														<p class="char-pz">商品名称：<span>中国电信宽带</span></p>
+														<p class="char-pz">订单金额：<span>1900元</span></p>
+														<p class="char-pn">您的中国电信宽带已经帮您配好，但是快递联系不上您，请您收到信息后主动跟客服联系，谢谢！</p>
+													</div>
+												</div>
+											</li>
+											<li>								
+												<p class="cell-time">2016-12-16 18:00</p>
+											</li>
+											<li>
+												<h4 class="cell-h4">しovの遨游<em>15:00:45</em></h4>
+												<div class="cell-pt">价格则相应降低到109元。</div>
+											</li>
+											<li>
+												<h4 class="cell-h5">最是蝶恋花<em>15:00:45</em></h4>
+												<div class="cell-pt">享受200M电信光宽带+3GB流量</div>
+											</li>
+										
+										</ul>
+									</div>
+									<div class="cell-item">
+										<div class="cell-item-box">
+											<ul class="customer-page-item flex-cell">
+												<li><a class="page-flt"><i></i></a></li>
+												<li class="page-act"><a class="page-text">1</a></li>
+												<li><a class="page-text">2</a></li>
+												<li><a class="page-text">3</a></li>
+												<li><a class="page-text">4</a></li>
+												<li><a class="page-text">5</a></li>
+												<li><a class="page-text">6</a></li>
+												<li><a class="page-text">7</a></li>
+												<li><a class="page-frt"><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>							
+			</div>
+		</div>
+		
+		<!--
+        	作者：handy
+        	时间：2016-12-13
+        	描述：以下html内容更新12-13
+        -->
+		<!--遮罩whole-->
+		<div class="mask-bg"></div>
+		<div class="mask-item-bg"></div>
+		<div class="mask-item-patter"></div><!--话术独立遮罩-->
+		
+		<!--new新建类别-->
+		<div class="bord-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">新建类别</div>
+				<div class="matter-box-rt"><a class="comm-close bord-close"><i></i></a></div>
+			</div>
+			<div class="bord-rtc">
+				<div class="flex">
+					<p class="flex-hd bord-title">名称：</p>
+					<div class="flex-rt bord-int"><input type="text" name="" placeholder="我的话术" /></div>
+				</div>
+				<div class="bord-buts">
+					<a class="bord-butts">确认</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--new问答新增-->
+		<div class="answer-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">编辑快捷回复</div>
+				<div class="matter-box-rt"><a class="comm-close answer-close"><i></i></a></div>
+			</div>
+			<div class="answer-row">
+				<ul class="answer-line">
+					<li>
+						<span>问：</span>
+						<input type="text" name="" placeholder="" />
+					</li>
+					<li>
+						<span class="align">答：</span>
+						<textarea name="" id="answer" rows="" cols=""></textarea>
+					</li>
+				</ul>
+				<div class="answer-but">
+					<a class="answer-clos">取消</a>
+					<a class="answer-conf">确定</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--new问答查看-->	
+		<div class="answer-item">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">编辑快捷回复</div>
+				<div class="matter-box-rt"><a class="comm-close answer-item-close"><i></i></a></div>
+			</div>
+			<div class="answer-item-row">
+				<div class="answer-item-mt" id="answer_item">
+					<ul class="answer-tab">
+						<li>
+							<div class="answer-list">
+								<div class="flex">
+									<div class="answer-imgt"><img src="lib/img/icon-img-patient.png"/></div>
+									<div class="answer-a">您好？<a class="answer-edit"></a><a class="answer-del"></a></div>								
+								</div>
+								<div class="flex answer-ct">
+									<div class="answer-ptm"><img src="lib/img/icon-img-doctor.png"/></div>
+									<div class="answer-p">
+										<p>根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，截至2016年第三季度，我国固定宽带家庭普及率达到59.6%，较二季度提升了3个百分点。与此同时，因为高清电视的逐渐普及，家庭用户对于宽带速度的要求也相应提高。近期，江苏电信推出了针对家庭宽带用户的提速计划</p>
+									</div>
+								</div>
+							</div>
+							<div class="answer-edent">
+								<input class="edent-int" type="text" name="" value="您好？" />
+								<div class="answer-abs">
+									<select class="ord-set">
+										<option>分类一</option>
+										<option>分类二</option>
+									</select>
+								</div>
+								<textarea class="text-int" id="text_int" name="" rows="" cols="" value="">较二季度提升了3个百分点。与此同时，因为高清电视的逐渐普及，家庭用户对于宽带速度的要求也相应提高。近期，江苏电信推出了针对家庭宽带用户的提速计划</textarea>
+								<div class="answer-config"><a class="row-config">保存</a><a class="row-conse">取消</a></div>
+							</div>
+						</li>
+						<li>
+							<div class="answer-list">
+								<div class="flex">
+									<div class="answer-imgt"><img src="lib/img/icon-img-patient.png"/></div>
+									<div class="answer-a">您好？<a class="answer-edit"></a><a class="answer-del"></a></div>								
+								</div>
+								<div class="flex answer-ct">
+									<div class="answer-ptm"><img src="lib/img/icon-img-doctor.png"/></div>
+									<div class="answer-p">
+										<p>根据宽带发展联盟最新发布的2016年第三季度《中国宽带普及状况报告》，截至2016年第三季度，我国固定宽带家庭普及率达到59.6%，较二季度提升了3个百分点。与此同时，因为高清电视的逐渐普及，家庭用户对于宽带速度的要求也相应提高。近期，江苏电信推出了针对家庭宽带用户的提速计划</p>
+									</div>
+								</div>
+							</div>
+							<div class="answer-edent">
+								<input class="edent-int" type="text" name="" value="您好？" />
+								<div class="answer-abs">
+									<select class="ord-set">
+										<option>分类一</option>
+										<option>分类二</option>
+									</select>
+								</div>
+								<textarea class="text-int" id="text_int" name="" rows="" cols="" value="">较二季度提升了3个百分点。与此同时，因为高清电视的逐渐普及，家庭用户对于宽带速度的要求也相应提高。近期，江苏电信推出了针对家庭宽带用户的提速计划</textarea>
+								<div class="answer-config"><a class="row-config">保存</a><a class="row-conse">取消</a></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="answer-cin"></div>
+			</div>
+		</div>
+		
+		
+		
+		<!--搜索结果-->
+	    <div class="record-box" id="moveBox">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">搜索结果</div>
+				<div class="matter-box-rt"><a class="record-close"><i></i></a></div>
+			</div>
+			<div class="record-item" id="record_item">				
+				<ul class="record-item-ct">
+					<li>
+						<h4 class="record-h1">话术类别</h4>
+						<h4 class="record-h2">话术内容</h4>
+					</li>										
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+					<li>
+						<p class="record-p1">子宫肌瘤-完全解答-问答</p>
+						<p class="record-p2">台湾八县市农特产品展销暨旅游推介洽谈会在北京展览馆开幕</p>
+					</li>
+				</ul>					
+			</div>
+			<div class="record-cin"></div>
+	    </div>
+		
+		
+		<!--编辑访客标签-->
+		<div class="tags-box">
+			<div class="tags-box-title">
+				<div class="tags-box-hd"><a class="tg-close"><i></i></a></div>
+				<div class="tags-box-pre">编辑访客标签</div>
+				<div class="tags-box-rt"><a class="tg-confirm"><i></i></a></div>
+			</div>
+			<!--<div class="tags-cov">
+				<span class="tags-cov-words">所有标签</span>
+				<a class="tags-cov-but">新建标签</a>
+			</div>-->
+			<div class="tags-cont" id="tags_contly">
+				<div class="tags-cont-item">
+					<p class="tags-cont-text">客户类型</p>
+					<ul class="tags-type-line">
+						<li>优质客户</li>
+						<li>一般客户</li>
+						<li>初级客户</li>
+					</ul>
+				</div>
+				<div class="tags-cont-item">
+					<p class="tags-cont-txt">客户评分</p>
+					<ul class="tags-score-list">
+						<li><i class="tg-early"></i>初级意向30-60分</li>
+						<li><i class="tg-middle"></i>中级意向30-60分</li>
+						<li><i class="tg-senior"></i>高级意向30-60分</li>
+						<li><i class="tg-stay"></i>待收款向30-60分</li>
+						<li><i class="tg-deal"></i>成交收款客户</li>
+					</ul>
+				</div>
+				<div class="tags-cont-item">
+					<p class="tags-cont-txt">客户状态</p>
+					<ul class="tags-state-lint">
+						<li><i class="tg-browse"></i>只浏览未沟通</li>
+						<li><i class="tg-preli"></i>初步沟通</li>
+						<li><i class="tg-insight"></i>深入沟通</li>
+						<li><i class="tg-open"></i>已开通使用客户</li>
+						<li><i class="tg-conver"></i>成交客户</li>
+						<li><i class="tg-invalid"></i>无效客户</li>
+						<li><i class="tg-office"></i>公司同事</li>
+						<li><i class="tg-period"></i>试用到期末购买用户</li>
+					</ul>
+				</div>		
+				
+			</div>
+			<div class="tags-cin"></div><!--新增12-16-->
+		</div>
+		<!--编辑访客标签end-->
+		
+		<!--修改密码-->
+		<div class="reset-item">
+			<div class="reset-item-title">
+				<div class="reset-item-hd"><i class="item-confirm"></i></div>
+				<div class="reset-item-pre">修改密码</div>
+				<div class="reset-item-rt"><a class="item-close"><i></i></a></div>
+			</div>
+			<div class="reset-box">
+				<ul class="reset-box-row">
+					<li>
+						<div class="reset-box-row-hd">原密码：</div>
+						<div class="reset-box-row-rt">
+							<input class="int" type="password" maxlength="16" name=""  placeholder=""/>
+						</div>
+					</li>
+					<li>
+						<div class="reset-box-row-hd">新密码：</div>
+						<div class="reset-box-row-rt">
+							<input class="int" type="password" maxlength="16" name=""  placeholder=""/>
+						</div>
+					</li>
+					<li>
+						<div class="reset-box-row-hd">确认密码：</div>
+						<div class="reset-box-row-rt">
+							<input class="int" type="password" maxlength="16" name=""  placeholder=""/>
+						</div>
+					</li>
+				</ul>
+				<div class="reset-box-but">
+					<a class="item-but">确认修改</a>
+				</div>
+			</div>
+		</div>
+		<!--修改密码end-->
+		
+		<!--意见反馈-->
+		<div class="feedback-row">
+			<div class="feedback-row-title">
+				<div class="feedback-row-hd"><i class="feedback-confirm"></i></div>
+				<div class="feedback-row-pre">系统反馈</div>
+				<div class="feedback-row-rt"><a class="feedback-close"><i></i></a></div>
+			</div>
+			<div class="feedback-box">
+				<textarea class="feedback-text" id="feedback_text" name="" rows="2" cols="4" placeholder="请写下您的反馈意见"></textarea>
+				<div class="feedback-but"><a class="rows-but">确认保存</a></div>
+			</div>			
+		</div>
+		<!--意见反馈end-->
+		
+	
+		<!--选择客服-->
+		<div class="customer-row">
+			<div class="customer-row-title">
+				<div class="customer-row-hd"><a class="customer-close"><i></i></a></div>
+				<div class="customer-row-pre">选择客服</div>
+				<div class="customer-row-rt"><a class="customer-confirm"><i></i></a></div>
+			</div>
+			<div class="customer-box">
+				<div class="customer-search">
+					<input class="customer-search-int" type="text" name="" placeholder="搜索客服" />
+					<a class="customer-search-but"><i class="customer-mt"></i></a>
+				</div>
+				<div class="customer-cont">
+					<ul class="customer-line">
+						<li>
+							<input type="radio" name="line_radio" id="line_1"  />
+							<label for="line_1">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺兴</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_2"  />
+							<label for="line_2">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<!--<li>
+							<input type="radio" name="line_radio" id="line_3"  />
+							<label for="line_3">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_4"  />
+							<label for="line_4">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>-->
+						<li>
+							<input type="radio" name="line_radio" id="line_5"  />
+							<label for="line_5">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_6"  />
+							<label for="line_6">
+								<a class="customer-cell">
+									<p class="customer-hd">张艺</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_7"  />
+							<label for="line_7">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_8"  />
+							<label for="line_8">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_9"  />
+							<label for="line_9">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_10"  />
+							<label for="line_10">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_11"  />
+							<label for="line_11">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_12"  />
+							<label for="line_12">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>
+						<li>
+							<input type="radio" name="line_radio" id="line_13"  />
+							<label for="line_13">
+								<a class="customer-cell">
+									<p class="customer-hd">林俊杰</p>
+									<p class="customer-pre">总公司</p>
+									<p class="customer-rt">在线</p>
+								</a>
+							</label>
+						</li>				
+					</ul>
+				</div>
+				<div class="customer-page">
+					<ul class="customer-page-item flex-cell">
+						<li><a class="page-flt"><i></i></a></li>
+						<li class="page-act"><a class="page-text">1</a></li>
+						<li><a class="page-text">2</a></li>
+						<li><a class="page-text">3</a></li>
+						<li><a class="page-text">4</a></li>
+						<li><a class="page-text">5</a></li>
+						<li><a class="page-text">6</a></li>
+						<li><a class="page-text">7</a></li>
+						<li><a class="page-frt"><i></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--选择客服end-->
+
+		<!--
+        	作者：handy
+        	时间：2016-12-16
+        	描述：以下内容最新
+      	 -->
+		<!--话术选择内容-->
+		
+		<div class="patter-row">
+			<div class="patter-row-title">
+				<div class="patter-row-hd"><i class="patter-confirm"></i></div>
+				<div class="patter-row-pre">1、科技部副部长</div>
+				<div class="patter-row-rt"><a class="patter-close"><i></i></a></div>
+			</div>
+			<div class="patter-item" id="patter">
+				<ul class="patter-list">
+					<li>
+						<div class="patter-doctor">
+							<div class="row-hd"><i class="img-doctor"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-patient">
+							<div class="row-hd"><i class="img-patient"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-doctor">
+							<div class="row-hd"><i class="img-doctor"></i></div>
+							<p class="row-text">计费方式按里程结合时间计算</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-doctor">
+							<div class="row-hd"><i class="img-doctor"></i></div>
+							<p class="row-text">计费方式按里程结合时间计算</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-patient">
+							<div class="row-hd"><i class="img-patient"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-patient">
+							<div class="row-hd"><i class="img-patient"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-patient">
+							<div class="row-hd"><i class="img-patient"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+					<li>
+						<div class="patter-patient">
+							<div class="row-hd"><i class="img-patient"></i></div>
+							<p class="row-text">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。根据司马迁《史记·南越列传》记载，当时南边攻打岭南的秦军有50万之多，起义爆发后，南军最高长官任嚣曾派人考查过咸阳的情况，发现咸阳在秦二世和赵高的昏庸统治下，一塌糊涂。于是他下令，严禁军队北上作战，以保存实力，后来任嚣的部下赵佗拥兵自重，割据岭南，建立南越国，至此这支秦军再也没有北上中原。</p>
+						</div>						
+					</li>
+				</ul>				
+			</div>			
+			<div class="patter-cin"></div>	
+		</div>
+		<!--话术选择内容end-->
+		
+		<!--媒体素材选择-->
+		
+		<div class="matter-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">媒体素材选择</div>
+				<div class="matter-box-rt"><a class="matter-close"><i></i></a></div>
+			</div>
+			<div class="matter-row">
+				<div class="matter-row-flt">
+					<div class="matter-row-flt-tab">
+						<ul class="tab-line">
+							<li class="tab-act">图文</li>
+							<li>语音</li>
+							<li>图片</li>
+							<li>视频</li>
+							<li>模板消息</li>
+							<li>自由素材</li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="matter-row-frt">
+					<div class="col-all-search">
+						<input class="col-all-int" type="text" name=""  value="" placeholder="请输入关键字搜索"/>
+						<a class="col-all-search-icon"><i></i></a>
+					</div>	
+					<div id="matter_cen">	
+					
+						<!--图文-->					
+						<div class="matter-home" style="display: block;">
+							<div class="flex-cell matter-cols"><a class="cols-act">全部</a><a>分类一</a><a>分类二</a><a>分类三</a></div>
+							<div class="sketch flex-cell">
+								<ul class="sketch-row flex-hd">
+									<li>
+										<div class="sketch-line">
+											<h4 class="line-h4">2016/11/12 星期三 10:12:10</h4>
+											<img class="line-img" src="lib/img/icon-h.jpg" />
+											<h5 class="line-pt">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运巴基斯坦走向发展和繁荣</h5>
+											<ul class="line-row">
+												<li>
+													<div class="line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<ul class="sketch-row flex-hd">
+									<li>
+										<div class="sketch-line">
+											<h4 class="line-h4">2016/11/12 星期三 10:12:10</h4>
+											<img class="line-img" src="lib/img/icon-h.jpg" />
+											<h5 class="line-pt">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</h5>
+											<ul class="line-row">
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<ul class="sketch-row flex-hd">
+									<li>
+										<div class="sketch-line">
+											<h4 class="line-h4">2016/11/12 星期三 10:12:10</h4>
+											<img class="line-img" src="lib/img/icon-h.jpg" />
+											<h5 class="line-pt">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</h5>
+											<ul class="line-row">
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+												<li>
+													<div class="flex-hd line-list">
+														<p class="line-text">中巴经济走廊是巴基斯坦走向发展和繁荣的保证，将改变巴基斯坦的国家命运</p>
+													</div>
+													<div class="line-rt">
+														<img src="lib/img/app-bg.png" />
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>								
+							</div>
+							<div class="sketch-page">
+								<ul class="customer-page-item flex-cell">
+									<li><a class="page-flt"><i></i></a></li>
+									<li class="page-act"><a class="page-text">1</a></li>
+									<li><a class="page-text">2</a></li>
+									<li><a class="page-text">3</a></li>
+									<li><a class="page-text">4</a></li>
+									<li><a class="page-text">5</a></li>
+									<li><a class="page-text">6</a></li>
+									<li><a class="page-text">7</a></li>
+									<li><a class="page-frt"><i></i></a></li>
+								</ul>
+							</div>
+							<div class="sketch-but"><a>确定</a></div>
+						</div>
+						
+						<!--语音-->						
+						<div class="matter-home">			
+							<div class="flex-cell matter-cols"><a class="cols-act">全部</a><a>分类一</a><a>分类二</a><a>分类三</a></div>
+							<div class="col-voice">
+								<div class="col-voice-fot">
+									<a class="col-voice-but">上传录音</a>
+									<a class="col-voice-but">录音</a>
+								</div>
+								<ul class="col-line-title">
+									<li>
+										<h4 class="web-h1">选择</h4>
+										<h4 class="web-h2">语音名称</h4>
+										<h4 class="web-h3">播放</h4>
+										<h4 class="web-h3">删除</h4>
+										<h4 class="web-h3">修改</h4>
+										<h4 class="web-h3">下载</h4>
+										<h4 class="web-h3">时长</h4>										
+									</li>
+								</ul>
+								<ul class="col-line" id="col_line">
+									<li>
+										<div class="col-voice-row">
+											<div class="col-voice-item">
+												<input type="radio" name="soutname" id="sout_1">
+												<label for="sout_1">
+													<a class="col-rts">
+														<p class="web-p1">产品介绍产品介绍产品介绍</p>													
+													</a>
+												</label>
+											</div>											
+											<p class="web-p2"><i class="col-video"></i></p>
+											<p class="web-p2"><i class="col-delete"></i></p>
+											<p class="web-p2"><i class="col-revised"></i></p>
+											<p class="web-p2"><i class="col-download"></i></p>
+											<p class="web-p2 col-pn">20s</p>
+										</div>										
+									</li>
+									<li>
+										<div class="col-voice-row">
+											<div class="col-voice-item">
+												<input type="radio" name="soutname" id="sout_2">
+												<label for="sout_2">
+													<a class="col-rts">
+														<p class="web-p1">产品介绍产品介绍产品介绍</p>													
+													</a>
+												</label>
+											</div>											
+											<p class="web-p2"><i class="col-video"></i></p>
+											<p class="web-p2"><i class="col-delete"></i></p>
+											<p class="web-p2"><i class="col-revised"></i></p>
+											<p class="web-p2"><i class="col-download"></i></p>
+											<p class="web-p2 col-pn">20s</p>
+										</div>										
+									</li>
+									<li>
+										<div class="col-voice-row">
+											<div class="col-voice-item">
+												<input type="radio" name="soutname" id="sout_3">
+												<label for="sout_3">
+													<a class="col-rts">
+														<p class="web-p1">产品介绍产品介绍产品介绍</p>													
+													</a>
+												</label>
+											</div>											
+											<p class="web-p2"><i class="col-video"></i></p>
+											<p class="web-p2"><i class="col-delete"></i></p>
+											<p class="web-p2"><i class="col-revised"></i></p>
+											<p class="web-p2"><i class="col-download"></i></p>
+											<p class="web-p2 col-pn">20s</p>
+										</div>										
+									</li>
+								</ul>						
+							</div>
+							<div class="sketch-but"><a>确定</a></div>
+						</div>
+						<!--图片-->
+						<div class="matter-home">
+							<div class="flex-cell matter-cols"><a class="cols-act">全部</a><a>分类一</a><a>分类二</a><a>分类三</a></div>
+							<div class="imgs-box">
+								<ul class="imgs-row">
+									<li><img src="lib/img/icon-lg-bg.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-h.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-h.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-h.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-h.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-w.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+									<li><img src="lib/img/icon-h.jpg"/><h4 class="imgs-h4">abc.jpg</h4></li>
+								</ul>
+								<div class="imgs-page">
+									<ul class="customer-page-item flex-cell">
+										<li><a class="page-flt"><i></i></a></li>
+										<li class="page-act"><a class="page-text">1</a></li>
+										<li><a class="page-text">2</a></li>
+										<li><a class="page-text">3</a></li>
+										<li><a class="page-text">4</a></li>
+										<li><a class="page-text">5</a></li>
+										<li><a class="page-text">6</a></li>
+										<li><a class="page-text">7</a></li>
+										<li><a class="page-frt"><i></i></a></li>
+									</ul>
+								</div>							
+							</div>	
+							<div class="sketch-but"><a>确定</a></div>
+						</div>
+						<div class="matter-home">视频</div>
+						<!--模板消息-->
+						<div class="matter-home">
+							<div class="plate"> 
+								<ul class="plate-line-title">
+									<li>
+										<div class="flex-cell plate-box">
+											<h4 class="col-lis-h1">选择</h4>
+											<h4 class="col-lis-h2">编号</h4>
+											<h4 class="col-lis-h2">标题</h4>
+											<h4 class="col-lis-h3">一级行业</h4>
+											<h4 class="col-lis-h3">二级行业</h4>
+										</div>
+									</li>
+								</ul>
+								<ul class="plate-line" id="plate_line">	
+									<li>
+										<div class="plate-row">
+											<input type="radio" name="plate-name" id="plate_1">
+											<label for="plate_1">
+												<a class="plate-cell">
+													<p class="plate-col-1">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-2">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-3">电信行业</p>
+													<p class="plate-col-4">电子商务</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="plate-row">
+											<input type="radio" name="plate-name" id="plate_2">
+											<label for="plate_2">
+												<a class="plate-cell">
+													<p class="plate-col-1">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-2">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-3">电信行业</p>
+													<p class="plate-col-4">电子商务</p>
+												</a>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="plate-row">
+											<input type="radio" name="plate-name" id="plate_3">
+											<label for="plate_3">
+												<a class="plate-cell">
+													<p class="plate-col-1">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-2">或者重命名或删除表单模板中的字段或组</p>
+													<p class="plate-col-3">电信行业</p>
+													<p class="plate-col-4">电子商务</p>
+												</a>
+											</label>
+										</div>
+									</li>
+								</ul>
+								<!--修改模板-->
+								<div class="plate-item">
+									<div class="plate-item-line">
+										<div class="matter-box-title">
+											<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+											<div class="matter-box-pre">修改模板</div>
+											<div class="matter-box-rt"><a class="plate-close"><i></i></a></div>
+										</div>
+										<div class="plate-item-tm">
+											<ul class="plate-cles">
+												<li>
+													<div class="flex-hd plate-ft plate-fte">项目名：</div>
+													<div class="flex-hd plate-rt plate-text">消息通知</div>														
+												</li>
+												<li>
+													<div class="flex-hd plate-ft">开头提醒：</div>
+													<div class="flex-hd plate-rt"><input type="" name="" placeholder="您好" /> </div>														
+												</li>
+												<li>
+													<div class="flex-hd plate-ft">商品名：</div>
+													<div class="flex-hd plate-rt"><input type="" name="" placeholder="您好" /> </div>														
+												</li>
+												<li>
+													<div class="flex-hd plate-ft">消费时间：</div>
+													<div class="flex-hd plate-rt"><input type="" name="" placeholder="您好" /> </div>														
+												</li>
+												<li>
+													<div class="flex-hd plate-ft">备注：</div>
+													<div class="flex-hd plate-rt"><textarea rows="2" cols="10" id="plate" placeholder="你可以回复文字或语音对该商品及商家进行评价哦！"></textarea></div>														
+												</li>
+											</ul>
+											<div class="plate-sent"><a>确定发送</a></div>
+										</div>
+										
+									</div>
+								</div>
+								<!--消息通知-->
+								<div class="notifie">
+									<ul class="notifie-line">
+										<li><h3 class="notifie-h3">消费通知</h3></li>
+										<li><p class="notifie-p1">2016年12月15日</p></li>
+										<li><p class="notifie-pt">您好！您已经消费成功。</p></li>
+										<li><p class="">商品名：中国电信宽带</p></li>
+										<li><p class="">消费时间：2016年12月15日</p></li>
+										<li><p class="">备注：或者重命名或删除表单模板中的字段或组</p></li>
+									</ul>
+								</div>
+								
+								
+								<div class="sketch-but"><a>确定</a></div>
+							</div>
+						</div>
+						<!--自由素材-->
+						<div class="matter-home">
+							<div class="free-row">
+								<div class="free-row-title">
+									<i class="free-img"></i>									
+									<i class="free-voice"></i>
+									<i class="free-video"></i>
+								</div>
+								<div class="free-item">
+									<textarea id="freeLine" name="" rows="2" cols="2"></textarea>
+								</div>		
+								<div class="free-but"><a>发送</a></div>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--媒体素材选择end-->
+	
+		<!--历史访客筛选条件-->
+		<div class="screen-col">
+			<div class="screen-title flex">
+				<div class="screen-hd"></div>
+				<div class="flex-hd screen-pre">筛选条件</div>
+				<div class="flex-rt screen-rt">
+					<a class="screen-close"><i></i></a>
+				</div>
+			</div>
+			<div class="screen-box">
+				<!--<h3>筛选收藏夹</h3>
+				<div class="screen-cell flex">
+					<div class="screen-flt flex-hd">
+						<div class="select">
+							<span class="placeholder select-st">自定义</span>
+							<ul>
+								<li>自定义</li>
+								<li>自定义二</li>
+								<li>自定义三</li>
+							</ul>
+						</div>	
+					</div>						
+					<div class="screen-frt flex-rt">
+						<a>修改</a>
+						<a>删除</a>
+					</div>
+				</div>-->
+				
+				<!--<h3 class="h3-top">自定义筛选条件</h3>-->
+				<ul class="flex-cell screen-list">
+					<li>
+						<div class="select">
+							<span class="placeholder select-st">性别</span>
+							<ul>
+								<li>男</li>
+								<li>女</li>								
+							</ul>
+						</div>					
+					</li>
+					<li>
+						<input class="screen-data" type="" name="" id="datepicker1" readonly placeholder="请选择日期" />						
+						<i class="ict"></i>
+					</li>
+					<li>
+						<input class="screen-data" type="" name="" id="datepicker2" readonly placeholder="请选择日期" />
+						<i class="ict"></i>
+					</li>
+				</ul>
+				<ul class="flex-cell screen-list">
+					<li>						
+						<div class="select">
+							<span class="placeholder select-st">留言状态</span>
+							<ul>
+								<li>在线</li>
+								<li>忙碌</li>
+								<li>离开</li>
+							</ul>
+						</div>							
+					</li>
+					<li>
+						<div class="select">
+							<span class="placeholder select-st">来访次数</span>
+							<ul>
+								<li>第一次来访</li>
+								<li>第二次来访</li>
+								<li>第三次来访</li>
+							</ul>
+						</div>							
+					</li>
+					<li>						
+						<div class="select">
+							<span class="placeholder select-st">联系方式</span>
+							<ul>
+								<li>电话联系</li>
+								<li>QQ联系</li>		
+								<li>邮箱联系</li>	
+							</ul>
+						</div>		
+					</li>
+				</ul>
+				
+				<h3>标签查询</h3>
+				<ul class="flex-cell screen-list">
+					<li>
+						<div class="select">
+							<span class="placeholder select-st">成交客户</span>
+							<ul>
+								<li>成交客户</li>
+								<li>成交客户二</li>
+								<li>成交客户三</li>
+								<li>成交客户四</li>
+								<li>成交客户五</li>
+							</ul>
+						</div>							
+					</li>
+					<li>
+						<div class="select">
+							<span class="placeholder select-st">客户评分</span>
+							<ul>
+								<li>客户评分</li>
+								<li>客户评分二</li>
+								<li>客户评分三</li>
+							</ul>
+						</div>								
+					</li>
+					<li>		
+						<div class="select">
+							<span class="placeholder select-st">客户状态</span>
+							<ul>
+								<li>客户状态</li>
+								<li>客户状态二</li>
+								<li>客户状态三</li>
+							</ul>
+						</div>								
+					</li>
+				</ul>
+				<div class="screen-item">
+					<a class="screen-search">确定</a>
+			    </div>
+			</div>
+		</div>
+		<!--历史访客筛选条件end-->
+		
+		<!--录入订单-->
+		<div class="ord-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">录入订单</div>
+				<div class="matter-box-rt"><a class="matter-close ord-close"><i></i></a></div>
+			</div>
+			<div class="ord-row">				
+				<ul class="ord-line">
+					<li>
+						<div class="flex ord-row-flex">
+							<div class="ord-row-flt">
+								<span class="ord-span">昵称：</span><input class="imt-ord imt-ord-hd" type="text" name="" placeholder="林俊杰" />
+							</div>
+							<div class="ord-row-flt">
+								<span class="ord-span">姓名：</span><input class="imt-ord imt-ord-hd" type="text" name="" placeholder="林俊杰" />
+							</div>
+							<div class="flex-rt flex-hd ord-row-hd">
+								<span class="ord-span-rt">联系方式：</span><input class="imt-ord imt-ord-rt" type="text" name="" placeholder="13600000000" />
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="flex ord-row-flex">
+							<div class="ord-row-addr">
+								<span class="ord-span-addr">地址：</span><input class="imt-ord imt-ord-addr" type="text" name="" placeholder="广东省深圳市" />
+							</div> 														
+						</div>
+					</li>
+					<li>
+						<div class="ord-cent flex">
+							<span class="ord-st">付款方式：</span>
+							<ul class="ord-list flex">
+								<li class="list-act">代收</li>
+								<li>预付</li>
+							</ul>
+							<ul class="flex">
+								<li>
+									<span class="ord-st-qx">预计签收后：</span>
+								</li>
+								<li>
+									<div class="ord-ct">
+										<input class="imt-ord" type="text" name="" placeholder="5" />
+									</div>
+								</li>
+								<li>
+									<span class="ord-st-qx">天售后</span>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li>
+						<div class="flex-cell ord-top">
+							<div class="flex-hd ord-top-ft">
+								<span class="ord-text-spn">备注：</span>
+								<textarea id="ord_t1" class="ord-textarea" rows="2" cols="2" placeholder="请输入备注"></textarea>
+							</div>
+							<div class="flex-rt ord-top-ft">
+								<span class="ord-text-spn">备注2：</span>
+								<textarea id="ord_t2" class="ord-textarea" rows="ord-textarea" rows="2" cols="2" placeholder="请输入客服备注"></textarea>
+							</div>
+						</div>
+						
+						
+					</li>
+					<li>
+						<div class="ord-item">
+							<ul class="ord-item-titer">
+								<li>
+									<h4 class="ord-h4-1">产品名</h4>
+									<h4 class="ord-h4-2">是否赠品</h4>
+									<h4 class="ord-h4-3">单价</h4>
+									<h4 class="ord-h4-3">数量</h4>
+									<h4 class="ord-h4-3">优惠</h4>
+									<h4 class="ord-h4-3">总计</h4>
+									<h4 class="ord-h4-3">操作</h4>
+								</li>
+							</ul>
+							<ul class="ord-item-table" id="ord_row">
+								<li>
+									<div class="ord-col-1">
+										<select class="ord-set">
+											<option>1</option>
+											<option>2</option>
+										</select>
+										<!--<div class="select item-select">
+											<span class="placeholder ord-item-der">请选择</span>
+											<ul>
+												<li>1</li>
+												<li>2</li>
+											</ul>
+										</div>-->
+									</div>
+									<div class="ord-col-2">
+										<div class="select item-select">
+											<span class="placeholder ord-item-der">请选择</span>
+											<ul>
+												<li>是</li>
+												<li>否</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+									<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+									<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+									<div class="ord-col-3"><input class="ord-item-input" type="text" name="" placeholder="单价" /></div>
+									<div class="ord-col-3">
+										<div class="ord-button">
+											<a class="ord-add"></a>
+											<a class="ord-reduce"></a>
+										</div>
+									</div>						
+								</li>
+								
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="ord-but"><a class="ord-confirm">保存</a></div>
+			</div>
+		</div>
+		
+		<!--拜访登记-->
+		<div class="visit-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">编辑快捷回复</div>
+				<div class="matter-box-rt"><a class="comm-close visit-close"><i></i></a></div>
+			</div>
+			<div class="visit-row">
+				<div class="flex visit-row-mt">
+					<p>拜访人：林俊杰</p>
+					<p>拜访日期：2015-12-20</p>
+					<span class="visit-span">拜访形式：</span>
+					<div class="select visit-select">
+						<span class="placeholder ord-item-der">电话</span>
+						<ul>
+							<li>电话</li>
+							<li>网站</li>
+						</ul>
+					</div>
+					<span class="visit-span">下次拜访日期：</span>
+					<div class="visit-ints">
+						<input id="datepicker_visit" type="text" name="" readonly placeholder="请选择" />
+					</div>
+				</div>
+				<div class="visit-row-mt flex-cell visit-top">
+					<span>拜访内容：</span>
+					<textarea id="visit_text" name="" rows="" cols=""></textarea>
+				</div>
+				<div class="visit-item" id="visit_line">
+					<ul class="visit-line">
+						<li>
+							<h4 class="cols-1">拜访人</h4>
+							<h4 class="cols-1">拜访日期</h4>
+							<h4 class="cols-1">拜访形式</h4>
+							<h4 class="cols-1">下次拜访</h4>
+							<h4 class="cols-2">内容</h4>
+						</li>
+						<li>
+							<p class="cols-p1">林俊杰</p>
+							<p class="cols-p1">2016-12-20</p>
+							<p class="cols-p1">电话</p>
+							<p class="cols-p1">2017-01-20</p>
+							<p class="cols-p2">秦朝帝国的大军仿佛一夜之间人间蒸发了一样。当时南边攻打岭南的秦军有50万之多当时南边攻打岭南的秦军有50万之多</p>
+						</li>
+						<li>
+							<p class="cols-p1"></p>
+							<p class="cols-p1"></p>
+							<p class="cols-p1"></p>
+							<p class="cols-p1"></p>
+							<p class="cols-p2"></p>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="visit-but"><a>确定</a></div>
+			</div>
+		</div>
+		
+		<!--订单明细/订单详情弹框内容new1-10-->
+		<div class="solid-box">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">订单明细</div>
+				<div class="matter-box-rt"><a class="comm-close solid-close"><i></i></a></div>				
+			</div>
+			<!--订单明细-->
+			<div class="solid-row">
+				<div class="motor-box">
+					<div class="motor-row flex order-tm">
+						<div class="motor-row-search order-buts">
+							<input type="text" id="queryName" name="" placeholder="按昵称、电话、姓名查询">
+						</div>
+						<div class="span-txt">创建日期：</div>
+						<div class="motor-imt order-cur">
+							<input type="text" id="solidata1" name="" readonly="" placeholder="选择日期">
+							<i class="order-it"></i>
+						</div>
+						<div class="order-txt span-txt">至</div>
+						<div class="motor-imt order-cur">
+							<input type="text" id="solidata2" name="" readonly="" placeholder="选择日期">
+							<i class="order-it"></i>
+						</div>
+						<div class="span-txt">订单状态：</div>
+						<div class="select motor-select order-row-width order-mag">
+							<span class="motor-pla motor-der order-hes">全部</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</div>
+						<div class="span-txt">付款方式：</div>
+						<div class="select motor-select order-row-width order-mag">
+							<span class="motor-pla motor-der order-hes">全部</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</div>
+						<div class="order-confirm flex-cell">
+							<a>查询</a>
+							<a>导出</a>
+							<a>清空</a>
+						</div>
+					</div>
+				</div>
+				<div class="order-item solid-mt">
+					<ul class="order-item-titer">
+						<li>
+							<h4 class="order-h4-12">订单编号</h4>
+							<h4 class="order-h4-6">客户姓名</h4>
+							<h4 class="order-h4-9">微信昵称</h4>
+							<h4 class="order-h4-8">联系电话</h4>
+							<h4 class="order-h4-6">订单金额</h4>
+							<h4 class="order-h4-6">订单状态</h4>
+							<h4 class="order-h4-12">创建日期</h4>
+							<h4 class="order-h4-8">付款方式</h4>
+							<h4 class="order-h4-8">客服姓名</h4>
+							<h4 class="order-h4-8">售前客服</h4>
+							<h4 class="order-h4-8">售前分组</h4>
+							<h4 class="order-h4-9">操作</h4>
+						</li>
+					</ul>
+					<ul class="order-item-table" id="solidRow">
+						<li>
+							<div class="order-col-12">148237007301350</div>
+							<div class="order-col-6">林俊杰</div>
+							<div class="order-col-9">奔跑吧兄弟奔跑吧兄弟</div>
+							<div class="order-col-8">13866666666</div>
+							<div class="order-col-6">888888</div>
+							<div class="order-col-6">已签收</div>
+							<div class="order-col-12">2016-10-12 15:00:00</div>
+							<div class="order-col-8">代收</div>
+							<div class="order-col-8">蓝精灵</div>
+							<div class="order-col-8">小马哥</div>
+							<div class="order-col-8">售前分组测试</div>
+							<div class="order-col-9">
+								<div class="order-button">
+									<a class="order-delete"></a>
+									<a class="order-reduce"></a>
+									<a class="order-view" style="display: none;"></a>
+									<!--查看-->
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="order-col-12">148237007301350</div>
+							<div class="order-col-6">林俊杰</div>
+							<div class="order-col-9">奔跑吧兄弟奔跑吧兄弟</div>
+							<div class="order-col-8">13866666666</div>
+							<div class="order-col-6">888888</div>
+							<div class="order-col-6">已签收</div>
+							<div class="order-col-12">2016-10-12 15:00:00</div>
+							<div class="order-col-8">代收</div>
+							<div class="order-col-8">蓝精灵</div>
+							<div class="order-col-8">小马哥</div>
+							<div class="order-col-8">售前分组测试</div>
+							<div class="order-col-9">
+								<div class="order-button">
+									<a style="display: none;" class="order-delete"></a>
+									<a style="display: none;" class="order-reduce"></a>
+									<a style="display: block;" class="order-view"></a>
+									<!--查看-->
+								</div>
+							</div>
+						</li>
+						<div class="order-cent">
+							<p id="moreOrders" class="chat-row-look">没有更多数据了</p>
+						</div>
+					</ul>
+				</div>
+				<div class="solid-t2">
+					<div class="solid-tab">
+						<div class="order-line solid-line">
+							<h4 class="col-h4">订单详情 2016-12-23 ：15:00:00</h4>
+							<ul class="order-tab">
+								<li>
+									<p class="col-bor col-6">昵称</p>
+									<p class="col-19">奔跑吧兄弟</p>
+									<p class="col-6">订单总额</p>
+									<p class="col-19 col-color">1980</p>
+									<p class="col-6">付款方式</p>
+									<p class="col-19 col-color">代收</p>
+									<p class="col-6">订单状态</p>
+									<p class="col-19 col-color-sign">已签收</p>
+								</li>
+								<li>
+									<p class="col-bor col-6">姓名</p>
+									<p class="col-19">林俊杰</p>
+									<p class="col-6">电话</p>
+									<p class="col-19">13600000000</p>
+									<p class="col-6">地址</p>
+									<p class="col-44">广东省深圳市南山区科技园科技园科技园科技园</p>
+								</li>
+								<li class="col-height">
+									<p class="col-bor col-6">备注</p>
+									<p class="col-44">林俊杰...........</p>
+									<p class="col-6">备注2</p>
+									<p class="col-44">广东省深圳市南山区科技园科技园科技园科技园</p>
+								</li>
+								<li>
+									<p class="col-bor col-6">审核意见</p>
+									<p class="col-44">111222</p>
+									<p class="col-6">审核日期</p>
+									<p class="col-19 col-color">2016-12-23 12:15:00</p>
+									<p class="col-6">审核人</p>
+									<p class="col-19 col-color">小马哥</p>
+								</li>
+								<li>
+									<p class="col-bor col-6">核单备注</p>
+									<p class="col-44">111222</p>
+									<p class="col-6">核单日期</p>
+									<p class="col-19 col-color">2016-12-23 12:15:00</p>
+									<p class="col-6">核单人</p>
+									<p class="col-19 col-color">小马哥</p>
+								</li>
+								<li>
+									<p class="col-bor col-6">快递单号</p>
+									<p class="col-19">1552233333444</p>
+									<p class="col-6">物流公司</p>
+									<p class="col-19 col-color">圆通快递</p>
+									<p class="col-6">发货日期</p>
+									<p class="col-19 col-color">2016-12-23 12:15:00</p>
+									<p class="col-6">经手人</p>
+									<p class="col-19 col-color">小马哥</p>
+								</li>
+								<li>
+									<p class="col-bor col-6">入账金额</p>
+									<p class="col-44">9998</p>
+									<p class="col-6">入账日期</p>
+									<p class="col-19 col-color">2016-12-23 12:15:00</p>
+									<p class="col-6">财务</p>
+									<p class="col-19 col-color">小马哥</p>
+								</li>
+							</ul>
+							<ul class="order-title">
+								<li>
+									<h4 class="col-ht-23">产品名</h4>
+									<h4 class="col-ht-18">单价</h4>
+									<h4 class="col-ht-18">数量</h4>
+									<h4 class="col-ht-18">优惠</h4>
+									<h4 class="col-ht-23">合计</h4>
+								</li>
+							</ul>
+							<ul class="order-wares solid-item" id="orderItemList">
+								<li>
+									<p class="col-p-23">中国电信</p>
+									<p class="col-p-18">88</p>
+									<p class="col-p-18">4</p>
+									<p class="col-p-18">10</p>
+									<p class="col-p-23">352</p>
+								</li>					
+							</ul>
+							<div class="order-cte">
+								<a class="order-back">返回</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>	
+			<!--订单详情-->			
+		</div>
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script type="text/javascript">
+			//datepicker日期插件
+			$().ready(function() {
+				$("#datepicker1,#datepicker2,#datepicker_visit,#solidata1,#solidata2").datepicker({ //new1-10
+					dateFormat: "yy-mm-dd"		
+				});		
+			});
+		</script>
+		<script type="text/javascript" src="lib/js/dateFormat.js" ></script><!--datepicker日期插件-->
+		<script type="text/javascript">
+			//图片瀑布布局
+			$(function(){
+				$('.wall').jaliswall({ item: '.article' });
+			});
+		</script>
+		<script>		 
+		$(function(){
+			//文字两行省略号
+			$(".line-text").each(function() {
+				//火狐兼容
+				if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){  
+				     str = $(".line-text,.line-pt").text().substr(0,26) + " ...";
+       			  	$(".line-text,.line-pt").text(str);
+				}  			
+				$(this).css('width','100%');
+				$('.line-pt').css('width','100%');
+			});
+		});
+
+		</script>
+		<script type="text/javascript" src="lib/js/config-img.js" ></script><!--图片瀑布布局-->
+		<script type="text/javascript" src="lib/js/selectFx.js"></script><!--下拉框美化-->
+		
+	</body> 
+</html>

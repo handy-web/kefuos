@@ -1,0 +1,25 @@
+/* * 日期插件--已压缩 * 2016-12-17 * @handy */
+.ui-datepicker{-webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, .1);box-shadow: 0 3px 20px rgba(0, 0, 0, .1);z-index: 110;background: #fff;}
+.calendar{position: absolute;width: 280px;left: 50%;top: 50%;margin: -145px 0px 0px -140px;background: #fff;border-radius: 4px;overflow: hidden;}
+/*#ui-datepicker-div{display: block;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);opacity: 1;-webkit-transition: none;transition: none;-webkit-animation: bounce 0.6s ease-out;animation: bounce 0.6s ease-out;}*/
+.ui-datepicker-header{height: 45px;line-height: 45px;color: #333;background: #F0F0F0;margin-bottom: 10px;font-family: "microsoft yahei";}
+.ui-datepicker-prev,
+.ui-datepicker-next{width: 20px;height: 20px;text-indent: 9999px;border: 2px solid #b0aead;border-radius: 100%;cursor: pointer;overflow: hidden;margin-top: 12px;}
+.ui-datepicker-prev{float: left;margin-left: 12px;position: relative;}
+.ui-datepicker-prev:after{transform: rotate(45deg);margin: -43px 0px 0px 8px;}
+.ui-datepicker-next{position: relative;float: right;margin-right: 12px;}
+.ui-datepicker-next:after{transform: rotate(-135deg);margin: -43px 0px 0px 6px;}
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after{content: '';position: absolute;display: block;width: 5px;top: 6px;height: 5px;margin-top: 2px;border-left: 2px solid #b0aead;border-bottom: 2px solid #b0aead;}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover:after,
+.ui-datepicker-next:hover:after{border-color: #1A9BFF;}
+.ui-datepicker-title{text-align: center;font-size: 16px}
+.ui-datepicker-calendar{width: 100%;text-align: center;}
+.ui-datepicker-calendar thead tr th span{display: block;width: 34px;color: #1A9BFF;margin-bottom: 5px;font-size: 13px;font-weight: 200;font-family: "microsoft yahei"}
+.ui-state-default{display: block;text-decoration: none;color: #b5b5b5;line-height: 34px;font-size: 12px;font-family: "microsoft yahei"}
+.ui-state-default:hover{background: rgba(0, 0, 0, 0.06);}
+.ui-state-highlight{color: #1A9BFF;font-weight: 400;}
+.ui-state-active{color: #90D8FE;}
+.ui-datepicker-unselectable .ui-state-default{color: #eee;border: 2px solid transparent;}

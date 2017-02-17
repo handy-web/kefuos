@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	</head>
+	<body>
+		<div class="main-nov">
+			<div class="main-header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="main-cent">
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li>
+									<a href="conver.html">
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li>
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>
+								</li>
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li>
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li class="act">
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li>
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--任务列表-->
+					<div class="role-cent">
+						<h3 class="role-h3">任务列表</h3>
+						<ul class="role-litn" id="roleLitn">
+							<li><a class="flex"><i class="role-img1"></i><p>异地巡航</p></a></li>
+							<li><a class="flex"><i class="role-img2"></i><p>站街</p></a></li>
+							<li><a class="flex"><i class="role-img3"></i><p>附近打招呼</p></a></li>
+							<li><a class="flex"><i class="role-img4"></i><p>丢漂流瓶</p></a></li>
+							<li><a class="flex"><i class="role-img5"></i><p>批量导入号码</p></a></li>
+							<li class="role-dent"><a class="flex"><i class="role-img6"></i><p>批量加微信</p></a></li>
+							<li><a class="flex"><i class="role-img7"></i><p>添加群好友</p></a></li>
+							<li><a class="flex"><i class="role-img8"></i><p>批量扫码</p></a></li>
+							<li><a class="flex"><i class="role-img9"></i><p>批量打开网址</p></a></li>
+							<li><a class="flex"><i class="role-img10"></i><p>批量关注公众号</p></a></li>
+							<li><a class="flex"><i class="role-img11"></i><p>群发信息</p></a></li>
+							<li><a class="flex"><i class="role-img12"></i><p>多群直播</p></a></li>
+							<li><a class="flex"><i class="role-img13"></i><p>发朋友圈</p></a></li>
+							<li><a class="flex"><i class="role-img14"></i><p>创建群聊</p></a></li>
+							<li><a class="flex"><i class="role-img15"></i><p>修改群公告</p></a></li>
+							<li><a class="flex"><i class="role-img16"></i><p>一键点赞</p></a></li>
+							<li><a class="flex"><i class="role-img17"></i><p>一键评论</p></a></li>
+							<li><a class="flex"><i class="role-img18"></i><p>一键清死粉</p></a></li>
+							<li class="role-dent"><a class="flex"><i class="role-img19"></i><p>一键同意加好友</p></a></li>
+							<li><a class="flex"><i class="role-img20"></i><p>打开微信</p></a></li>
+							<li><a class="flex"><i class="role-img21"></i><p>手机重启</p></a></li>
+							<li><a class="flex"><i class="role-img22"></i><p>手机关机</p></a></li>
+						</ul>
+					</div>
+					<!--任务内容-->
+					<div class="role-frt">
+						<div class="role-ins">
+							<ul class="flex-cell role-ins-row">
+								<li class="role-act"><a>当前任务</a></li>
+								<li><a>历史任务</a></li>
+								<li><a>参考模板</a></li>								
+							</ul>							
+						</div>
+						<div class="role-center">
+							<!--当前任务-->
+							<div class="role-home" style="display: block;">
+								<div class="role-but">
+									<a>批量停止</a>
+									<a>批量执行</a>
+									<a id="roleNew">生成任务集</a>
+								</div>
+								<div class="role-lute" id="roleRow">
+									<h4 class="role-ht">第一任务</h4>
+									<div class="role-tab">
+										<ul class="role-tab-row">
+											<li>
+												<div class="flex-cell role-rtm">
+													<h4 class="rol-1">选择</h4>
+													<h4 class="rol-2">序号</h4>
+													<h4 class="rol-3">任务名</h4>
+													<h4 class="rol-4">任务内容</h4>
+													<h4 class="rol-5">执行时间</h4>
+													<h4 class="rol-6">状态</h4>
+													<h4 class="rol-7">操作</h4>
+												</div>
+											</li>
+											<li>
+												<div class="flex-cell role-lend">
+													<div class="role-chek">
+														<input type="checkbox" name="role-name" id="rols_1" checked />
+														<label for="rols_1"></label>
+													</div>
+													<p class="pol-2">1</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">
+														<input type="text" class="role-time" name="" readonly placeholder="请选择执行日期" />
+													</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="flex-cell role-lend">
+													<div class="role-chek">
+														<input type="checkbox" name="role-name" id="rols_2"  />
+														<label for="rols_2"></label>
+													</div>
+													<p class="pol-2">1</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">2016-12-20</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+											</li>	
+											<li>
+												<div class="flex-cell role-lend">
+													<div class="role-chek">
+														<input type="checkbox" name="role-name" id="rols_3"  />
+														<label for="rols_3"></label>
+													</div>
+													<p class="pol-2">1</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">2016-12-20</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+											</li>	
+											<li>
+												<div class="flex-cell role-lend">
+													<div class="role-chek">
+														<input type="checkbox" name="role-name" id="rols_4"  />
+														<label for="rols_4"></label>
+													</div>
+													<p class="pol-2">1</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">2016-12-20</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+											</li>	
+										</ul>
+									</div>
+									<h4 class="role-ht">任务集</h4>
+									<div class="role-tab">
+										<ul class="role-tab-row">
+											<li>
+												<div class="flex-cell role-rtm">
+													<h4 class="rol-1">选择</h4>
+													<h4 class="rol-2">序号</h4>
+													<h4 class="rol-3">任务名</h4>
+													<h4 class="rol-4">任务内容</h4>
+													<h4 class="rol-5">执行时间</h4>
+													<h4 class="rol-6">状态</h4>
+													<h4 class="rol-7">操作</h4>
+												</div>
+											</li>
+											<li>
+												<div class="flex-cell role-lend">
+													<a class="role-bt"><i class="role-down"></i></a>	
+													<div class="role-chek">
+														<input type="checkbox" name="ros-name" id="ros_1" />
+														<label for="ros_1"></label>
+													</div>
+													<p class="pol-2">1</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">2016-12-20</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+												<div class="role-row">
+													<ul class="role-row-item">
+														<li>
+															<h5 class="ros-h1">序号</h5>
+															<h5 class="ros-h2">任务名</h5>
+															<h5 class="ros-h3">任务内容</h5>
+															<h5 class="ros-h4">执行时间</h5>
+															<h5 class="ros-h5">状态</h5>
+															<h5 class="ros-h6">操作</h5>
+														</li>
+														<li>
+															<p class="ros-p1">1</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">
+																<input class="form-control"  value="" readonly placeholder="请选择执行时间" />
+															</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">2</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">3</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">4</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<div class="flex-cell role-lend">
+													<a class="role-bt"><i class="role-down"></i></a>														
+													<div class="role-chek">
+														<input type="checkbox" name="ros-name" id="ros_2"  />
+														<label for="ros_2"></label>
+													</div>
+													<p class="pol-2">2</p>
+													<p class="pol-3">位置巡航</p>
+													<p class="pol-4">从车公庙到竹子林巡航</p>
+													<p class="pol-5">2016-12-20</p>
+													<p class="pol-6">正在执行</p>
+													<div class="role-p7">
+														<a class="role-wait"></a>
+														<a class="role-delete"></a>
+														<a class="role-reduct"></a>
+														<a class="role-renew"></a>
+													</div>
+												</div>
+												<div class="role-row">
+													<ul class="role-row-item">
+														<li>
+															<h5 class="ros-h1">序号</h5>
+															<h5 class="ros-h2">任务名</h5>
+															<h5 class="ros-h3">任务内容</h5>
+															<h5 class="ros-h4">执行时间</h5>
+															<h5 class="ros-h5">状态</h5>
+															<h5 class="ros-h6">操作</h5>
+														</li>
+														<li>
+															<p class="ros-p1">3</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">3</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">3</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">14:00</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>
+														<li>
+															<p class="ros-p1">1</p>
+															<p class="ros-p2">位置巡航</p>
+															<p class="ros-p3">从车公庙到竹子林巡航</p>
+															<p class="ros-p4">
+																<input class="form-control"  value="" readonly placeholder="请选择执行时间" />
+															</p>
+															<p class="ros-p5">正在执行</p>
+															<p class="ros-p6">
+																<a class="roles-wait"></a>
+																<a class="roles-delete"></a>
+																<a class="roles-reduct"></a>
+																<a class="roles-renew"></a>
+															</p>
+														</li>														
+													</ul>
+												</div>
+											</li>											
+										</ul>
+									</div>
+								</div>
+								<!--任务弹框-->
+								<div class="block-box">
+									<div class="block-height"></div>
+									<div class="flex-cell block-row">
+										<div class="block-row-flt">
+											<div class="block-line">
+												<div class="block-post">													
+													<ul class="block-tab">
+														<li class="block-curr">选择设备</li>
+														<li>选择标签</li>
+													</ul>
+												</div>
+											</div>
+											<div class="block-cent">
+												<!--选择设备-->
+												<div class="block-home" style="display: block;">
+													<h5 class="block-h5">当前选择10部手机</h5>
+													<div class="block-item" id="blockItem">
+														<div class="block-int">
+															<input type="checkbox" name="" id="blocksAll" value="" />
+															<label for="blocksAll">
+																<a class="block-pt">全部</a>
+															</label>
+														</div>
+														<div class="block-mt">
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockGroup1"  /><label for="blockGroup1"></label></a>																
+																<a class="block-atc">默认分组</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_gre1" />
+																		<label for="block_gre1"><a class="block-tct">手机1</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_gre2" />
+																		<label for="block_gre2"><a class="block-tct">手机2</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_gre3" />
+																		<label for="block_gre3"><a class="block-tct">手机3</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_gre4" />
+																		<label for="block_gre4"><a class="block-tct">手机4</a></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockGroup2"  /><label for="blockGroup2"></label></a>																
+																<a class="block-atc">深圳组</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_sz1" />
+																		<label for="block_sz1"><a class="block-tct">手机1</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_sz2" />
+																		<label for="block_sz2"><a class="block-tct">手机2</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_sz3" />
+																		<label for="block_sz3"><a class="block-tct">手机3</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_sz4" />
+																		<label for="block_sz4"><a class="block-tct">手机4</a></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockGroup3"  /><label for="blockGroup3"></label></a>																
+																<a class="block-atc">广州组</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_gz1" />
+																		<label for="block_gz1"><a class="block-tct">手机1</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_gz2" />
+																		<label for="block_gz2"><a class="block-tct">手机2</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_gz3" />
+																		<label for="block_gz3"><a class="block-tct">手机3</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_gz4" />
+																		<label for="block_gz4"><a class="block-tct">手机4</a></label>
+																	</li>
+																</ul>
+															</div>
+														</div>							
+													</div>
+												</div>
+												<!--选择标签-->
+												<div class="block-home">
+													<h5 class="block-h5">当前选择10个标签</h5>
+													<div class="block-item" id="blockRet">
+														<div class="block-int">
+															<input type="checkbox" name="" id="blockAlltag" value="" />
+															<label for="blockAlltag">
+																<a class="block-pt">全部标签</a>
+															</label>
+														</div>
+														<div class="bolck-crte">
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockPt1"  /><label for="blockPt1"></label></a>																
+																<a class="block-atc">客户类型</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_type1" />
+																		<label for="block_type1"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_type2" />
+																		<label for="block_type2"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_type3" />
+																		<label for="block_type3"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-1" id="block_type4" />
+																		<label for="block_type4"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockPt2"  /><label for="blockPt2"></label></a>																
+																<a class="block-atc">客户评分</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_grade1" />
+																		<label for="block_grade1"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_grade2" />
+																		<label for="block_grade2"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_grade3" />
+																		<label for="block_grade3"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-2" id="block_grade4" />
+																		<label for="block_grade4"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-ht">
+																<a class="block-imt"><input type="checkbox" name="" id="blockPt3"  /><label for="blockPt3"></label></a>																
+																<a class="block-atc">客户评分</a>																
+															</div>
+															<div class="block-not">
+																<ul class="block-list">
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_ct1" />
+																		<label for="block_ct1"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_ct2" />
+																		<label for="block_ct2"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_ct3" />
+																		<label for="block_ct3"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="block-3" id="block_ct4" />
+																		<label for="block_ct4"><a class="block-tct">优质客户（120）</a></label>
+																	</li>
+																</ul>
+															</div>
+														</div>							
+													</div>
+												</div>												
+											</div>
+										</div>										
+										<div class="block-row-frt">
+											<div id="contHome">
+												<!--异地巡航内容-->
+												<div class="cont-home" style="display: block;">
+													<div class="block-hmt"  id="blockHmt1">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>如我手机在北京，可将它漫游至深圳，围绕我选定的路线巡航，吸粉。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+															
+														</div>
+														<div class="block-wt flex">
+															<span>巡航半径：</span>
+															<input type="text" maxlength="6" name="" value="5" />
+															<span>公里</span>	
+															<em>（也可以在地图上鼠标连线）</em>
+														</div>
+														<div class="block-wt flex">
+															<span>巡航速度：</span>
+															<input type="text" maxlength="6" name="" value="5" />
+															<span>公里/小时</span>	
+															<em>（如未设置，则默认为3公里每小时）</em>
+														</div>
+														<div class="block-wt">
+															<span>巡航完成：</span>
+															<label class="block-cell" for="cheKet1"><a class="block-hd"><input type="radio" name="chteket" id="cheKet1"><i class="block-checked"></i></a><span>终止巡航</span></label>
+															<label class="block-cell" for="cheKet2"><a class="block-hd"><input type="radio" name="chteket" id="cheKet2"><i class="block-checked"></i></a><span>循环</span></label>																																
+														</div>
+													</div>
+													<div class="block-kit">
+														<div class="block-kit-row">
+															<div class="block-kit-title" id="blocKit1">
+																<span class="block-span">深圳</span>
+																<a class="block-change">[<em>更换城市</em>]</a>
+																<span class="block-text">当前缩放等级：20</span>
+															</div>
+															<div class="block-bte flex-cell" id="blocKet1">
+																<div class="block-input">
+																	<input type="text" maxlength="30" name="" id="" value="" placeholder="深圳" />
+																	<a class="block-search"><i></i></a>
+																</div>
+																<div class="block-txt">
+																	<span>当前选择的坐标是：118.165522 20.45277</span>
+																	<span>所属区域：广东省深圳市南山区科技园</span>
+																</div>
+															</div>
+															<div class="fix-map">
+																<div class="block-map-box" id="dituContent1"></div>
+																<div class="fix-box block-line-row">
+																	<div class="fix-hei block-line-ht" id="fixRow1">
+																		<ul class="fix-item">
+																			<li class="fix-act">
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>																
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<!--地图/卫星按钮-->
+																<div class="map-row">
+																	<ul class="map-line">
+																		<li class="map-act"><a>地图</a></li>
+																		<li><a>卫星</a></li>
+																	</ul>																										
+																</div>
+																<!--确定按钮-->
+																<div class="map-item block-map">
+																	<a class="map-btn">打开附近站街</a>
+																</div>
+															</div>
+														</div>								
+													</div>
+												</div>
+												<!--站街-->
+												<div class="cont-home">
+													<div class="block-hmt" id="blockHmt2">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>我想在我的目标客户集中的地方打开微信，让附近人搜索到我</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-wt flex">
+															<span>巡航速度：</span>
+															<input type="text" name="" value="5" maxlength="6" />
+															<span>公里/小时</span>																
+														</div>
+														<div class="block-wt flex">
+															<span>节点停留时间：</span>
+															<input type="text" name="" value="5" maxlength="6" />
+															<span>小时</span>															
+														</div>														
+													</div>
+													<div class="block-kit">
+														<div class="block-kit-row">
+															<div class="block-kit-title" id="blocKit2">
+																<span class="block-span">深圳</span>
+																<a class="block-change">[<em>更换城市</em>]</a>
+																<span class="block-text">当前缩放等级：20</span>
+															</div>
+															<div class="block-bte flex-cell" id="blocKet2">
+																<div class="block-input">
+																	<input type="text" maxlength="30" name="" id="" value="" placeholder="深圳" />
+																	<a class="block-search"><i></i></a>
+																</div>
+																<div class="block-txt">
+																	<span>当前选择的坐标是：118.165522 20.45277</span>
+																	<span>所属区域：广东省深圳市南山区科技园</span>
+																</div>
+															</div>
+															<div class="fix-map">
+																<div class="block-map-box" id="dituContent2"></div>
+																<div class="fix-box block-line-row">
+																	<div class="fix-hei block-line-ht" id="fixRow2">
+																		<ul class="fix-item">
+																			<li class="fix-act">
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>																
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																			<li>
+																				<a>
+																					<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+																					<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+																					<p class="fix-pt">电话：0735-88888868</p>
+																					<p class="fix-pt">坐标：118.165522 20.45277</p>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<!--地图/卫星按钮-->
+																<div class="map-row">
+																	<ul class="map-line">
+																		<li class="map-act"><a>地图</a></li>
+																		<li><a>卫星</a></li>
+																	</ul>																										
+																</div>
+																<!--确定按钮-->
+																<div class="map-item block-map">
+																	<a class="map-btn">打开附近站街</a>
+																</div>
+															</div>
+														</div>								
+													</div>
+												</div>
+												
+												<!--附近打招呼-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>我想加一批正在医院看病的女粉，他们都是我的重点客户。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">
+															<div class="block-cm">
+																<span class="block-mode">操作方式：</span>
+																<label class="block-cell" for="chte_1"><a class="block-hd"><input type="radio" name="chtename" id="chte_1"><i class="block-checked"></i></a><span>加为好友</span></label>
+																<label class="block-cell" for="chte_2"><a class="block-hd"><input type="radio" name="chtename" id="chte_2"><i class="block-checked"></i></a><span>打招呼</span></label>																														
+															</div>
+															<div class="block-cm">
+																<span class="block-mode">性别选择：</span>
+																<label class="block-cell" for="gender_1"><a class="block-hd"><input type="radio" name="gendername" id="gender_1"><i class="block-checked"></i></a><span>所有</span></label>
+																<label class="block-cell" for="gender_2"><a class="block-hd"><input type="radio" name="gendername" id="gender_2"><i class="block-checked"></i></a><span>男</span></label>	
+																<label class="block-cell" for="gender_3"><a class="block-hd"><input type="radio" name="gendername" id="gender_3"><i class="block-checked"></i></a><span>女</span></label>	
+															</div>
+															<div class="block-cm block-top">
+																<div class="block-wt block-left flex">
+																	<span>每次给：</span>
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>人打招呼</span>																
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em">添加打招呼语：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="Lentrow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--丢漂流瓶-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>每天丢几个漂流瓶，设置一个话题，捞到瓶子并跟我聊天的都是我的精准客户。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-top">
+																<div class="block-wt block-left flex">
+																	<span>每次手机最多丢：</span>
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>个漂流瓶</span>																
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>丢瓶间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em">验证信息：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>															
+															<div class="block-cm block-lent">
+																<textarea id="Lentrow1" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--批量导入号码-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>通过微信绑定的手机号码、qq、邮箱识别微信号，或者导入已经保存好的微信号，并存入号码库，方便以后导入。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">																													
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">导入本地手机号码：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-empty">清空</a>
+																	<a class="flexbut block-import">导入</a>
+																</div>
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="blockIem1" name="" rows="2" cols="3"></textarea>
+																<p class="block-rt">共100条记录</p>
+															</div>
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">导入本地QQ、微信、邮箱资料：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-empty">清空</a>
+																	<a class="flexbut block-import">导入</a>
+																</div>
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="blockIem2" name="" rows="2" cols="3"></textarea>
+																<p class="block-rt">共100条记录</p>
+															</div>															
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">导入本地QQ、微信、邮箱资料：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-empty">清空</a>
+																	<a class="flexbut block-import">导入</a>
+																</div>
+															</div>
+															<div class="block-wt block-left flex">
+																<span>开始号段：</span>
+																<input class="block-intwe" type="text" name="" value="11111" maxlength="6">
+																<span>结束号段：</span>			
+																<input class="block-intwe" type="text" name="" value="52111" maxlength="6">
+																<span>导入号码数：</span>	
+																<input class="block-intwe" type="text" name="" value="10000" maxlength="6">
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="blockIem3" name="" rows="2" cols="3"></textarea>
+																<p class="block-rt">共100条记录</p>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--批量加微信-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete block-over">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>批量加微信</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-litm">
+															<ul class="block-litm-titel">
+																<li>
+																	<h4 class="block-litm-h4">微信/手机/QQ/邮箱</h4>
+																	<h4 class="block-litm-h4">微信/手机/QQ/邮箱</h4>
+																	<h4 class="block-litm-h4">微信/手机/QQ/邮箱</h4>
+																	<h4 class="block-litm-h4">微信/手机/QQ/邮箱</h4>
+																</li>
+															</ul>
+															<ul class="block-litm-row" id="litmRow">
+																<li>
+																	<p class="block-litm-pt">13500000000</p>
+																	<p class="block-litm-pt">weixin2017.com</p>
+																	<p class="block-litm-pt">1095984521</p>
+																	<p class="block-litm-pt">1095984521@qq.com</p>
+																</li>
+																<li>
+																	<p class="block-litm-pt">13500000000</p>
+																	<p class="block-litm-pt">weixin2017.com</p>
+																	<p class="block-litm-pt">1095984521</p>
+																	<p class="block-litm-pt">1095984521@qq.com</p>
+																</li>
+																<li>
+																	<p class="block-litm-pt">13500000000</p>
+																	<p class="block-litm-pt">weixin2017.com</p>
+																	<p class="block-litm-pt">1095984521</p>
+																	<p class="block-litm-pt">1095984521@qq.com</p>
+																</li>													
+															</ul>
+															<p class="block-rt">剩余10000条未执行</p>
+														</div>
+														<div class="block-redio" id="bloRow">
+															<div class="block-cm">
+																<span class="block-mode">操作方式：</span>
+																<label class="block-cell" for="chtecell1"><a class="block-hd"><input type="radio" name="chtecell" id="chtecell1"><i class="block-checked"></i></a><span>直接点击添加</span></label>
+																<label class="block-cell" for="chtecell2"><a class="block-hd"><input type="radio" name="chtecell" id="chtecell2"><i class="block-checked"></i></a><span>发送验证信息</span></label>		
+																<label class="block-cell" for="chtecell3"><a class="block-hd"><input type="radio" name="chtecell" id="chtecell3"><i class="block-checked"></i></a><span>自动去重</span></label>																	
+															</div>
+															<div class="block-cm">
+																<span class="block-mode">性别选择：</span>
+																<label class="block-cell" for="chesex1"><a class="block-hd"><input type="radio" name="chesex" id="chesex1"><i class="block-checked"></i></a><span>所有</span></label>
+																<label class="block-cell" for="chesex2"><a class="block-hd"><input type="radio" name="chesex" id="chesex2"><i class="block-checked"></i></a><span>男</span></label>	
+																<label class="block-cell" for="chesex3"><a class="block-hd"><input type="radio" name="chesex" id="chesex3"><i class="block-checked"></i></a><span>女</span></label>	
+															</div>
+															<div class="block-cm block-top">
+																<div class="block-wt block-left flex">
+																	<span>每部手机每天最多导入：</span>
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>人打招呼</span>																
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>天停留</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>天</span>	
+																</div>													
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em">添加打招呼用语：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="weixRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>	
+												<!--添加群好友-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>有群粉丝质量非常高，我想把他们全部加为好友。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">	
+															<div class="block-cm block-comtop">
+																<span class="block-mode">操作方式：</span>
+																<label class="block-cell" for="checkadd1"><a class="block-hd"><input type="radio" name="checkadd" id="checkadd1"><i class="block-checked"></i></a><span>按照排列顺序从上往下添加</span></label>
+																<label class="block-cell" for="checkadd2"><a class="block-hd"><input type="radio" name="checkadd" id="checkadd2"><i class="block-checked"></i></a><span>按照发言数序从先往后添加</span></label>														
+															</div>
+															<div class="block-cm block-comtop">
+																<span class="block-mode">显示好友来源：</span>
+																<label class="block-cell" for="checkview1"><a class="block-hd"><input type="radio" name="checkview" id="checkview1"><i class="block-checked"></i></a><span>不显示</span></label>
+																<label class="block-cell" for="checkview2"><a class="block-hd"><input type="radio" name="checkview" id="checkview2"><i class="block-checked"></i></a><span>搜索微信号</span></label>
+																<label class="block-cell" for="checkview3"><a class="block-hd"><input type="radio" name="checkview" id="checkview3"><i class="block-checked"></i></a><span>QQ</span> </label>
+																<label class="block-cell" for="checkview4"><a class="block-hd"><input type="radio" name="checkview" id="checkview4"><i class="block-checked"></i></a><span>群聊</span> </label>														
+																<label class="block-cell" for="checkview5"><a class="block-hd"><input type="radio" name="checkview" id="checkview5"><i class="block-checked"></i></a><span>搜索手机号</span> </label>
+																<label class="block-cell" for="checkview6"><a class="block-hd"><input type="radio" name="checkview" id="checkview6"><i class="block-checked"></i></a><span>附近人</span> </label>														
+															</div>
+															<div class="block-cm block-comtop">
+																<span class="block-mode">添加范围：</span>
+																<label class="block-cell" for="checkrange1"><a class="block-hd"><input type="radio" name="checkrange" id="checkrange1"><i class="block-checked"></i></a><span>所有群</span></label>
+																<label class="block-cell" for="checkrange2"><a class="block-hd"><input type="radio" name="checkrange" id="checkrange2"><i class="block-checked"></i></a><span>置顶群</span></label>		
+															</div>
+															<div class="block-cm block-comtop">
+																<span class="block-mode">性别选择：</span>
+																<label class="block-cell" for="checksex1"><a class="block-hd"><input type="radio" name="checksex" id="checksex1"><i class="block-checked"></i></a><span>所有</span></label>
+																<label class="block-cell" for="checksex2"><a class="block-hd"><input type="radio" name="checksex" id="checksex2"><i class="block-checked"></i></a><span>男</span></label>	
+																<label class="block-cell" for="checksex3"><a class="block-hd"><input type="radio" name="checksex" id="checksex3"><i class="block-checked"></i></a><span>女</span></label>													
+															</div>
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left flex">
+																	<span>每次添加：</span>
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>个群好友</span>																
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>					
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>															
+														</div>													
+													</div>
+												</div>		
+												<!--批量扫码-->
+												<div class="cont-home">批量扫码</div>	
+												<!--批量打开网址-->
+												<div class="cont-home">批量打开网址</div>
+												<!--批量关注公众号-->
+												<div class="cont-home">批量关注公众号</div>
+												<!--群发信息-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>如我想根据粉丝标签，将第一次来访且没有说话的粉丝群发一遍消息，或者对所有手机上的粉丝群发一遍促销信息。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-top">														
+																<div class="block-wt block-left flex">
+																	<span>群发间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em">消息内容：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>															
+															<div class="block-cm block-lent">
+																<textarea id="massRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--多群直播-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>我一个群里面讲课，其他所有群都能接收到我讲的课程。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">														
+															<div class="block-cm">
+																<span class="block-mode">操作方式：</span>
+																<label class="block-cell" for="checkgroup1"><a class="block-hd"><input type="radio" name="checkgroup" id="checkgroup1"><i class="block-checked"></i></a><span>所有群</span></label>
+																<label class="block-cell" for="checkgroup2"><a class="block-hd"><input type="radio" name="checkgroup" id="checkgroup2"><i class="block-checked"></i></a><span>仅我创建的群</span></label>	
+																<label class="block-cell" for="checkgroup3"><a class="block-hd"><input type="radio" name="checkgroup" id="checkgroup3"><i class="block-checked"></i></a><span>不是我建的群</span></label>	
+															</div>
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em">添加打打招呼用语：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="groupRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--发朋友圈-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>在一个微信上发朋友圈，其他所有微信的朋友圈自动复制过去。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">																														
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">评论内容：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-sut">素材库</a>
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>															
+															<div class="block-cm block-lent">
+																<textarea id="circleRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>	
+														<div class="block-circle">
+															<ul class="block-circle-row">
+																<li><div class="block-border"><img src="lib/img/icon-h.jpg"/></div></li>
+																<li><div class="block-border"><input type="file" name="" id="" value="上传" /></div></li>																																
+															</ul>
+														</div>
+														<div class="block-redio">										
+															<i class="block-tion"></i>
+															<p class="block-bt">所在位置</p>
+														</div>
+															
+													</div>
+												</div>
+												<!--创建群聊-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>我想根据粉丝的标签将他们分别拉到不同的群，以便根据不同的客户进行不同的营销。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">
+															<div class="block-cm">
+																<span class="block-mode">操作方式：</span>
+																<label class="block-cell" for="chteitem1"><a class="block-hd"><input type="radio" name="chteitem" id="chteitem1"><i class="block-checked"></i></a><span>根据粉丝标签建群</span></label>
+																<label class="block-cell" for="chteitem2"><a class="block-hd"><input type="radio" name="chteitem" id="chteitem2"><i class="block-checked"></i></a><span>打乱顺序建群</span></label>																														
+															</div>														
+															<div class="block-cm block-top">
+																<div class="block-wt block-left flex">
+																	<span>修改群资料</span>																													
+																</div>
+																<div class="block-wt block-left flex">
+																	<span>群名：</span>	
+																	<input class="block-curt" type="text" name=""  maxlength="20">
+																</div>
+															</div>
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">群介绍：</div>																
+															</div>
+															<div class="block-cm block-lent">
+																<textarea id="cutRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--修改群公告-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p class="pt-center">我想方便的在群里@所有人</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-top">																
+																<div class="block-wt block-left flex">
+																	<span>每次间隔：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>到</span>			
+																	<input type="text" name="" value="5" maxlength="6">
+																	<span>秒</span>	
+																</div>
+															</div>
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">群公告内容：</div>															
+															</div>															
+															<div class="block-cm block-lent">
+																<textarea id="bontRow" name="" rows="2" cols="3"></textarea>
+															</div>
+														</div>													
+													</div>
+												</div>
+												<!--一键点赞-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>动动鼠标，对朋友圈进行批量自动点赞，批量评论，或者批量自动清除死粉，批量同意加粉申请。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">
+															<div class="block-cm">
+																<span class="block-mode">点赞规则：</span>
+																<label class="block-cell" for="chtegive1"><a class="block-hd"><input type="radio" name="chtegive" id="chtegive1"><i class="block-checked"></i></a><span>优先对重点客户点赞</span></label>
+																<label class="block-cell" for="chtegive2"><a class="block-hd"><input type="radio" name="chtegive" id="chtegive2"><i class="block-checked"></i></a><span>对附近朋友圈随机点赞</span></label>																														
+															</div>	
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left flex">
+																	<span>点赞数：</span>
+																	<input type="text" name="" value="1" maxlength="6">
+																	<span>个</span>
+																</div>
+															</div>											
+															<div class="block-cm flex">
+																<div class="flex-hd block-em block-clo9">时间间隔3-30秒随机</div>																
+															</div>
+															
+														</div>													
+													</div>
+												</div>
+												<!--一键评论-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p>动动鼠标，对朋友圈进行批量自动点赞，批量评论，或者批量自动清除死粉，批量同意加粉申请。</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">																														
+															<div class="block-cm flex block-comtop">
+																<div class="flex-hd block-em">评论用语：</div>
+																<div class="flex-rt block-wid">
+																	<a class="flexbut block-some">常用招呼语</a>
+																</div>
+															</div>															
+															<div class="block-cm block-lent">
+																<textarea id="montRow" name="" rows="2" cols="3"></textarea>
+															</div>
+															<div class="block-cm flex block-top">
+																<div class="flex-hd block-em block-clo9">可手动添加，也可从重用招呼语引入，随机选择话术发送，时间间隔3-30秒随机</div>															
+															</div>	
+														</div>													
+													</div>
+												</div>
+												<!--一键清死粉-->
+												<div class="cont-home">一键清死粉</div>
+												<!--一键同意加好友-->
+												<div class="cont-home">一键同意加好友</div>
+												<!--打开微信-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p class="pt-center">代开选定手机微信手机</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left">
+																	<span>打开选定手机微信：</span>
+																	<a class="flexbut block-imple">立即执行</a>
+																</div>
+															</div>											
+															
+														</div>													
+													</div>
+												</div>
+												<!--手机重启-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p class="pt-center">批量重启手机</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left">
+																	<span>重启选定手机：</span>
+																	<a class="flexbut block-imple">立即执行</a>
+																</div>
+															</div>											
+															
+														</div>													
+													</div>
+												</div>
+												<!--手机关机-->
+												<div class="cont-home">
+													<div class="block-both">
+														<div class="block-rete">
+															<a class="block-but">添加到任务列表</a>
+															<a class="block-but">立即执行</a>
+															<a class="block-regard">
+																<div class="block-tax">
+																	<p class="pt-center">关闭所选手机</p>
+																</div>
+															</a>
+															<a class="block-close"></a>
+														</div>
+														<div class="block-redio">															
+															<div class="block-cm block-comtop">																
+																<div class="block-wt block-left">
+																	<span>关机选定手机：</span>
+																	<a class="flexbut block-imple">立即执行</a>
+																</div>
+															</div>																									
+														</div>													
+													</div>
+												</div>													
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--历史任务-->
+							<div class="role-home">
+							历史任务
+							</div>
+							<!--参考模板-->
+							<div class="role-home">
+							参考模板
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="role-bg"></div>
+		<!--生成任务集-->
+		<div class="role-mt">
+			<div class="matter-box-title">
+				<div class="matter-box-hd"><i class="matter-confirm"></i></div>
+				<div class="matter-box-pre">生成任务集</div>
+				<div class="matter-box-rt"><a class="comm-close role-close"><i></i></a></div>
+			</div>
+			<div class="bord-rtc role-rm">
+				<div class="flex">
+					<p class="flex-hd bord-title">名称：</p>
+					<div class="flex-rt bord-int"><input type="text" maxlength="30" name="" placeholder="请输入生成任务集"></div>
+				</div>
+				<div class="bord-buts">
+					<a class="bord-butts">确认</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script>
+			$(function(){				
+				$('.role-ins-row li').click(function() {
+					var $index = $(this).index();
+					$(this).addClass('role-act').siblings().removeClass('role-act');
+					$(".role-center .role-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+				});
+				$('#roleNew').click(function(){
+					$('.role-mt').css('top',($(window).height() - $('.role-mt').outerHeight()) / 2 + 'px');
+					$('.role-mt').css('left',($(window).width() - $('.role-mt').outerWidth()) / 2 + 'px');
+					$('.role-bg').show();
+					$('.role-mt').addClass('role-mt-act');
+				});
+				$('.role-close').click(function(){
+					$('.role-bg').hide();
+					$('.role-mt').removeClass('role-mt-act');
+				});
+				//点击遮罩时隐藏
+				$('.role-bg').bind('click', function(e) {
+					var target = $(e.target);
+					if(target.closest('').length == 0) {						
+						$('.role-bg').hide();
+						$('.role-mt').removeClass('role-mt-act');		
+					}
+				});
+				$('.role-lute').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.role-but').outerHeight() * 2 + 'px');
+				$('.role-lute').css('min-height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.role-but').outerHeight() * 2 + 'px');
+				$('.role-bt').click(function() {
+					$(this).toggleClass('active').siblings('.role-down').removeClass('active');
+					$(this).parent('.role-lend').next(".role-row").slideToggle().siblings('.role-row').slideUp();								
+				});
+				//任务内容
+				$('.role-litn').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.role-h3').outerHeight() + 'px');
+				$('.block-row').css('height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.block-height').outerHeight() * 2 + 'px');
+				$('.block-item').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.block-height').outerHeight() - $('.block-line').outerHeight() - $('.block-h5').outerHeight() + 'px');
+				$('.block-tab li').click(function() {
+					var $index = $(this).index();
+					$(this).addClass('block-curr').siblings().removeClass('block-curr');
+					$(".block-cent .block-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+				});
+				//选择手机
+				$('.block-atc').click(function() {
+					$(this).toggleClass('block-active').siblings('.block-atc').removeClass('block-active');
+					$(this).parent('.block-ht').next(".block-not").slideToggle().siblings('.block-list').slideUp();								
+				});		
+				//全部手机选中及取消
+				$("#blocksAll").click(function() {
+					if ($(this).is(':checked')) {
+						$('.block-mt').find("input[type='checkbox']").prop("checked","checked"); 						
+					} else{
+						$('.block-mt').find("input[type='checkbox']").removeAttr("checked");
+					}
+				});
+				//全部标签选中及取消
+				$("#blockAlltag").click(function() {
+					if ($(this).is(':checked')) {
+						$('.bolck-crte').find("input[type='checkbox']").prop("checked","checked"); 						
+					} else{
+						$('.bolck-crte').find("input[type='checkbox']").removeAttr("checked");
+					}
+				});
+				//每个标签选中及取消
+				$('.block-imt').click(function(){
+					var cheCk = $(this).parent('.block-ht').next('.block-not').find("input[type='checkbox']");
+					if ($(this).children('input').is(':checked')){
+						cheCk.prop("checked","checked"); 						
+					} else{
+						cheCk.removeAttr("checked");
+					}
+				});
+				
+				//每个模块弹框
+				$('.role-litn li').click(function() {
+					$('.block-box').show();
+					var $index = $(this).index();
+					$(this).addClass('act-item').siblings().removeClass('act-item');
+					$("#contHome .cont-home").css('display', 'none').siblings().eq($index).css('display', 'block');
+					var $widthBclock1 =  $('#blockHmt1').outerHeight() + $('#blocKit1').outerHeight() + $('#blocKet1').outerHeight();
+					var $widthBclock2 =  $('#blockHmt2').outerHeight() + $('#blocKit2').outerHeight() + $('#blocKet2').outerHeight();
+					$('#dituContent1').css('height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $widthBclock1 - $('.block-height').outerHeight() * 4 + 'px');
+					$('#fixRow1').css('height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $widthBclock1 - $('.block-height').outerHeight() * 5 + 'px');
+					$('#dituContent2').css('height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $widthBclock2 - $('.block-height').outerHeight() * 4 + 'px');
+					$('#fixRow2').css('height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $widthBclock2 - $('.block-height').outerHeight() * 5 + 'px');
+					$('.block-litm-row').css('min-height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.block-height').outerHeight() * 3 - $('.block-over').outerHeight() - $('#bloRow').outerHeight() - $('.block-litm-titel').outerHeight() + 'px');
+					$('.block-litm-row').css('max-height',$(window).height() - $('.main-header').outerHeight() - $('.role-ins').outerHeight() - $('.block-height').outerHeight() * 3 - $('.block-over').outerHeight() - $('#bloRow').outerHeight() - $('.block-litm-titel').outerHeight() + 'px');					
+					$('.block-close').click(function(){
+						$('.block-box').hide();
+						$('.role-litn li').removeClass('act-item')
+					});
+				});
+				
+			});
+		</script>
+		<script type="text/javascript">
+			//datepicker日期插件
+			$().ready(function() {
+				$(".role-time").datepicker({
+					dateFormat: "yy-mm-dd"		
+				});		
+			});
+		</script>
+		<script type="text/javascript" src="lib/js/dateFormat.js" ></script>
+		<script type="text/javascript" src="lib/js/clockpicker.js" ></script>
+		<script type="text/javascript">			
+			var input = $('.form-control').clockpicker({
+				placement: 'top',
+				align: 'left',
+				autoclose: true,
+				'default': 'now'
+			});
+		</script>
+		<script type="text/javascript">
+		    //创建和初始化地图函数：
+		    function initMap(){
+		        createMap();//创建地图
+		        setMapEvent();//设置地图事件
+		       // addMapControl();//向地图添加控件
+		    }		    
+		    //创建地图函数：
+		    function createMap(){
+		        var map = new BMap.Map("dituContent1");//在百度地图容器中创建一个地图114.067521,22.540466
+		        var point = new BMap.Point(114.067521,22.540466);//定义一个中心点坐标
+		        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+		        window.map = map;//将map变量存储在全局
+		    }		    
+		    //地图事件设置函数：
+		    function setMapEvent(){
+		        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+		        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+		        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+		        map.enableKeyboard();//启用键盘上下左右键移动地图
+		    }		    
+		    //地图控件添加函数：
+		    function addMapControl(){		       
+			var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE}); //向地图中添加缩放控件
+			map.addControl(ctrl_nav);		        
+			var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});//向地图中添加缩略图控件
+			map.addControl(ctrl_ove);		       
+			var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT}); //向地图中添加比例尺控件
+			map.addControl(ctrl_sca);
+		    }		 		    
+		    initMap();//创建和初始化地图
+		</script>
+		<script type="text/javascript">
+		    //创建和初始化地图函数：
+		    function initMap(){
+		        createMap();//创建地图
+		        setMapEvent();//设置地图事件
+		       // addMapControl();//向地图添加控件
+		    }		    
+		    //创建地图函数：
+		    function createMap(){
+		        var map = new BMap.Map("dituContent2");//在百度地图容器中创建一个地图114.067521,22.540466
+		        var point = new BMap.Point(114.067521,22.540466);//定义一个中心点坐标
+		        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+		        window.map = map;//将map变量存储在全局
+		    }		    
+		    //地图事件设置函数：
+		    function setMapEvent(){
+		        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+		        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+		        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+		        map.enableKeyboard();//启用键盘上下左右键移动地图
+		    }		    
+		    //地图控件添加函数：
+		    function addMapControl(){		       
+			var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE}); //向地图中添加缩放控件
+			map.addControl(ctrl_nav);		        
+			var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});//向地图中添加缩略图控件
+			map.addControl(ctrl_ove);		       
+			var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT}); //向地图中添加比例尺控件
+			map.addControl(ctrl_sca);
+		    }		 		    
+		    initMap();//创建和初始化地图
+		</script>
+	</body>
+</html>

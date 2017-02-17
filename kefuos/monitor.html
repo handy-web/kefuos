@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>监控</title>
+	    <meta charset="utf-8">
+	    <link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />   
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/city-picker.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	</head>
+	<body>
+		<div class="main-nov">
+			<div class="main-header">
+				<div class="nav-flt">
+					<div class="nav-flt-hd"><img class="nav-logo" src="lib/img/icon-logo.png"/></div>					
+					<h2 class="nav-flt-h2">微桥智能多客服系统</h2>
+				</div>
+				<div class="nav-frt">
+					<div class="nav-row">
+						<a class="nav-row-hd nav-row-ft">
+							<div class="nav-row-hd-prm">
+								<div class="nav-row-bg  nav-row-ft">20 <span>位客户等待接入</span></div>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-refresh"></i>
+								<p class="nav-row-item">刷新</p>
+							</div>
+						</a>
+						<a class="nav-row-hd">
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-backstage"></i>
+								<p class="nav-row-item">后台</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" href="message.html">
+							<div class="nav-row-hd-prm">
+								<i class="nav-icon">5</i>
+								<i class="nav-row-notice"></i>
+								<p class="nav-row-item">通知</p>
+							</div>
+						</a>
+						<a class="nav-row-hd" id="nav_drop"><!--加id【12-13】-->
+							<div class="nav-row-hd-prm">
+								<i class="nav-row-name"></i>
+								<p class="nav-row-item">周杰伦</p>
+													
+							</div>								
+						</a>		
+							
+						<!--
+                        	作者：handy
+                        	时间：2016-12-16
+                        	描述：下拉框更新12-16
+                        -->				
+						<div class="nav-drop">						
+							<div class="nav-drop-item">
+								<i class="nav-bor"></i>
+								<ul class="nav-state">
+									<li class="icon-act">
+										<i class="drop-icon-online"></i>
+										<p class="drop-col-text">在线</p>
+									</li>
+									<li>
+										<i class="drop-icon-busy"></i>
+										<p class="drop-col-text">忙碌</p>
+									</li>
+									<li>
+										<i class="drop-icon-offonline"></i>
+										<p class="drop-col-text">离线</p>
+									</li>
+								</ul>
+								<ul class="nav-drop-row">									
+									<li id="nav_modify">
+										<i class="drop-icon-psw"></i>
+										<p class="drop-text">修改密码</p>
+									</li>
+									<li id="nav_user">
+										<i class="drop-icon-feedback"></i>
+										<p class="drop-text">用户反馈</p>
+									</li>
+									<li>
+										<i class="drop-icon-close"></i>
+										<p class="drop-text">退出登录</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="main-cent">
+				<!--flex布局--自适应-->
+				<div class="main-cent-flex">
+					<!--左侧内容一-->					
+					<div class="main-cent-flt">
+						<div class="row-box">
+							<ul class="row-line">								
+								<li>
+									<a href="conver.html">
+										<i class="icon-conver"></i>
+										<p class="row-pn">会话</p>
+									</a>									
+								</li>
+								<li>
+									<a href="customer.html">
+										<i class="icon-customer"></i>
+										<p class="row-pn">客户</p>
+									</a>									
+								</li> 
+								<li>
+									<a>
+										<i class="icon-friends"></i>
+										<p class="row-pn">好友</p>
+									</a>									
+								</li>
+								<li>
+									<a href="order.html">
+										<i class="icon-order"></i>
+										<p class="row-pn">订单</p>
+									</a>									
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="icon-index"></i>
+										<p class="row-pn">统计</p>
+									</a>									
+								</li>
+								<li>
+									<a href="tasks.html">
+										<i class="icon-task"></i>
+										<p class="row-pn">任务</p>
+									</a>									
+								</li>
+								<li class="act">
+									<a href="monitor.html">
+										<i class="icon-supervise"></i>
+										<p class="row-pn">监控</p>
+									</a>									
+								</li>
+								<li class="row-pos">
+									<a>
+										<i class="icon-setting"></i>
+										<p class="row-pn row-top">设置</p>
+									</a>									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--右边内容-->
+					
+					<div class="main-cent-row">
+						<div class="motor-box">
+							<div class="motor-row flex">
+								<div class="motor-row-search">
+									<input type="text" name="" placeholder="按昵称、电话、姓名查询客户" />
+									<a class="motor-row-but"><i></i></a>
+								</div>
+								
+								<div class="span-txt">分组：</div>								
+								<div class="select motor-select motor-row-width">
+									<span class="motor-pla motor-der">一组</span>
+									<ul>
+										<li>一组</li>
+										<li>二组</li>												
+									</ul>
+								</div>
+								<div class="span-txt">定位城市：</div>								
+								<div class="select motor-select motor-row-width">
+									<span class="motor-pla motor-der">请选择</span>
+									<ul>
+										<li>深圳</li>
+										<li>上海</li>												
+									</ul>
+								</div>
+								<div class="span-txt">设备名：</div>								
+								<div class="motor-imt">
+									<input type="text" name=""  placeholder="单行输入" />
+								</div>
+								<div class="span-txt">显示：</div>								
+								<div class="select motor-select motor-row-width">
+									<span class="motor-pla motor-der">8</span>
+									<ul id="shows">
+										<li>8</li>
+										<li>12</li>												
+									</ul>
+								</div>
+								<div class="span-txt">状态：</div>								
+								<div class="select motor-select motor-row-width">
+									<span class="motor-pla motor-der">请选择</span>
+									<ul>
+										<li class="actt">在线</li>
+										<li>忙碌</li>	
+										<li>离线</li>		
+									</ul>
+								</div>
+								<div class="motor-row-confirm">
+									<a>确定</a>
+								</div>
+									
+							</div>
+						</div>
+						
+						<div class="motor-item">
+							<ul class="motor-list">
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg no-tel"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+									<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+									<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+									<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+								<li>
+									<div class="motor-list-row">
+										<div class="motor-list-bor">
+											<i class="motor-bg"></i>
+											<img class="motor-img" src="lib/img/icon-w.jpg"/>
+											<div class="motor-text">
+												<p>最是蝶恋花</p>
+												<p>HT12458</p>
+												<p class="motor-pt">深圳组</p>
+												<p>深圳南山科技园</p>
+											</div>
+											<div class="flex-cell motor-icon">
+												<a class="motor-news">
+													<i></i>
+													<em>1</em>
+												</a>
+												<a class="motor-user">
+													<i></i>
+													<em>18</em>
+												</a>
+												<a class="motor-navigation"><i></i></a>
+												<a class="motor-customer"><i></i></a>
+											</div>
+										</div>
+										<p class="motor-pm">1/v01</p>
+									</div>
+								</li>
+					
+					
+							</ul>
+						</div>
+						
+						<div class="motor-fott">
+							<div class="motor-fott-but">
+								<a>上一页</a>
+								<a class="act-colos">下一页</a>
+							</div>
+						</div>												
+					</div>				
+				</div>				
+			</div>			
+		</div>
+		
+		<div class="motor-row-bg"></div>
+		<div class="motor-item-bg"></div>
+		<div class="control-box" id="chat">			
+			<div class="control-col-1">
+				<div class="control-box-title">
+					<div class="control-box-hd"></div>
+					<div class="control-box-pre">个人信息</div>
+					<div class="control-box-rt"><a class="control-close"><i></i></a></div>
+				</div>
+				<div class="control-row">
+					<div class="control-row-box">
+						<ul class="control-row-list">
+							<li>
+								<div class="control-img">
+									<img src="lib/img/icon-w.jpg"/>
+								</div>
+							</li>
+							<li>
+								<div class="flex">
+									<div class="flex-hd control-hd-row">昵称</div>
+									<div class="flex-rt control-rt-row"><input class="int-col" type="" name="" placeholder="林俊杰" /></div>
+								</div>
+							</li>
+							<li>
+								<div class="flex control-lint">
+									<div class="flex-hd">微信号</div>
+									<div class="flex-rt pt-colse">handy2016</div>
+								</div>
+							</li>
+							<li>
+								<div class="flex control-code">
+									<div class="flex-hd">二维码名片</div>
+									<div class="flex-rt code-box">
+										<img class="lint-code" src="lib/img/code.png"/>
+										<div class="code-rit">
+											<div class="code-nt"><img src="lib/img/code.png"/></div>
+										</div>
+									</div>
+									
+								</div>
+							</li>
+							<li>
+								<div class="flex control-padding">
+									<div class="flex-hd control-hd-row">分组</div>
+									<div class="flex-rt control-rt-row">
+										<div class="select control-select">
+											<span class="placeholder control-der">分组</span>
+											<ul>											
+												<li>一组</li>
+												<li>二组</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="flex control-padding">
+									<div class="flex-hd control-hd-row">性别</div>
+									<div class="flex-rt control-rt-row">
+										<div class="select control-select">
+											<span class="placeholder control-der">男</span>
+											<ul>											
+												<li>男</li>
+												<li>女</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="flex control-padding">
+									<div class="flex-hd control-hd-row">地区</div>
+									<div class="flex-rt control-rt-row"><input class="int-col" id="cityChoice" type="text" name=""  placeholder="选择城市" readonly /><i class="line-inc"></i></div>
+								</div>
+							</li>
+							<li>
+								<div class="control-invites">
+									<p class="invites-pt">个性签名</p>
+									<textarea id="invites" class="invites-text"></textarea>
+								</div>								
+							</li>
+							<li>
+								<div class="control-but flex">
+									<div class="but-col"><a id="col_wx">切换微信</a></div>
+									<div class="flex-hd but-col but-magin"><a id="fix_location">虚拟定位</a></div>
+									<div class="flex-rt but-col"><a>保存修改</a></div>																		
+								</div>
+							</li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="control-item">
+				<div class="control-item-box">
+					<ul class="control-item-list">
+						<li>
+							<div class="flex">
+								<div class="lint-img"><img src="lib/img/icon-w.jpg"/></div>
+								<div class="flex-hd">
+									<h4 class="lint-h4">最是蝶恋花<span>QT12543</span></h4>
+									<p class="lint-pct">深圳</p>
+								</div>
+								<div class="flex-rt">
+									<a class="lint-ct">125</a>
+								</div>
+							</div>							
+						</li>
+						<li>
+							<div class="flex">
+								<div class="lint-img"><img src="lib/img/icon-w.jpg"/></div>
+								<div class="flex-hd">
+									<h4 class="lint-h4">最是蝶恋花<span>QT12543</span></h4>
+									<p class="lint-pct">深圳</p>
+								</div>
+								<div class="flex-rt">
+									<a class="lint-ct">125</a>
+								</div>
+							</div>							
+						</li>
+						<li>
+							<div class="flex">
+								<div class="lint-img"><img src="lib/img/icon-w.jpg"/></div>
+								<div class="flex-hd">
+									<h4 class="lint-h4">最是蝶恋花<span>QT12543</span></h4>
+									<p class="lint-pct">深圳</p>
+								</div>
+								<div class="flex-rt">
+									<a class="lint-ct">125</a>
+								</div>
+							</div>							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fix-cm">
+			<div class="control-box-title">
+				<div class="control-box-btm">深圳<ins>【<a>更换城市</a>】</ins></div>
+				<div class="control-box-cen">当前缩放等级：20</div>
+				<div class="control-box-rt"><a class="fix-close"><i></i></a></div>
+			</div>
+			<div class="fix-row flex">
+				<div class="fix-hd">
+					<input class="ints" type="" name="" placeholder="深圳" />
+					<a class="ints-search"><i></i></a>
+				</div>
+				<div class="fix-pre">
+					<span>当前选择的坐标是：118.165522 20.45277</span>
+					<span>所属区域：广东省深圳市南山区科技园</span>
+				</div>
+			</div>
+			<div class="fix-map">
+				<div style="height: 35em;position: relative;width: 100%;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;" id="dituContent"></div>
+				<div class="fix-box">
+					<div class="fix-hei" id="fix">
+						<ul class="fix-item">
+							<li class="fix-act">
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+							<li>
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+							<li>
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+							<li>
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+							<li>
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+							<li>
+								<a>
+									<h3 class="fix-h3">广东省深圳市南山区科技园</h3>
+									<p class="fix-pt fix-pt-fit">地址：广东省深圳市南山区科技园</p>
+									<p class="fix-pt">电话：0735-88888868</p>
+									<p class="fix-pt">坐标：118.165522 20.45277</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--地图/卫星按钮-->
+				<div class="map-row">
+					<ul class="map-line">
+						<li class="map-act"><a>地图</a></li>
+						<li><a>卫星</a></li>
+					</ul>
+					
+					
+				</div>
+				<!--确定按钮-->
+				<div class="map-item">
+					<a class="map-btn">确定</a>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+		<script type="text/javascript" src="lib/js/city-data.js" ></script>
+		<script type="text/javascript" src="lib/js/city-picker.min.js" ></script>
+		<script>
+		    var cityPicker = new IIInsomniaCityPicker({
+		        data: cityData,
+		        target: '#cityChoice',
+		        valType: 'k-v',
+		        hideCityInput: '#city',
+		        hideProvinceInput: '#province',
+		//      callback: function(city_id){
+		//          alert(city_id);
+		//      }
+		    });
+		
+		    cityPicker.init();
+		</script>
+		<script>
+			$().ready(function() {
+		
+				$("#shows li").bind("click", function() {
+					var par = $('.motor-list li');
+					if($(this).text() == '8') {
+						if(par.hasClass('motor-act')) {
+							par.removeClass('motor-act');
+						} else {
+							par.addClass('motor-act');
+						}
+					} else {
+						par.addClass('motor-act');
+					}
+				});
+				
+				$('.motor-list li').bind("click", function(){
+					$('.control-box').css('top', ($(window).height() - $('.control-box').outerHeight()) / 2 + 'px');
+					$('.control-box').css('left', ($(window).width() - $('.control-box').outerWidth()) / 2 + 'px');
+					$('.motor-row-bg').show();
+					$('.control-box').addClass('control-act');
+					
+					$('.control-close').click(function(){
+						$('.motor-row-bg').hide();
+						$('.control-box').removeClass('control-act');
+						$('.control-item').removeClass('control-item-act');
+					});
+					$('#col_wx').click(function(){
+						$('.control-item').addClass('control-item-act');
+					});
+					$('#fix_location').click(function(){
+						$('.motor-item-bg').show();
+						$('.fix-cm').css('top', ($(window).height() - $('.fix-cm').outerHeight()) / 2 + 'px');
+						$('.fix-cm').addClass('fix-cm-act');
+						$('.fix-close').click(function(){		
+							$('.motor-item-bg').hide();
+							$('.fix-cm').removeClass('fix-cm-act');
+						});
+					});
+				}); 
+				//点击遮罩区域隐藏
+				$('.motor-row-bg').bind('click', function(e) {
+					var target = $(e.target);
+					if(target.closest('').length == 0) {
+						$('.motor-row-bg').hide();			
+						$('.control-box').removeClass('control-act');
+						$('.control-item').removeClass('control-item-act');
+					}
+				});
+				//虚拟地位点击遮罩区域隐藏
+				$('.motor-item-bg').bind('click', function(e) {
+					var target = $(e.target);
+					if(target.closest('').length == 0) {
+						$('.motor-item-bg').hide();			
+						$('.fix-cm').removeClass('fix-cm-act');
+					}
+				});
+			});
+		</script>
+		<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+       // addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图114.067521,22.540466
+        var point = new BMap.Point(114.067521,22.540466);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+
+		<script type="text/javascript" src="lib/js/index.js" ></script>
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+	</body>
+</html>
